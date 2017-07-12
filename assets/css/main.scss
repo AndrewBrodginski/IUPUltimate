@@ -12,12 +12,12 @@ main{
 
 //mobile css adjustment
 @media screen and (max-width: 1024px){
-	.mdl-layout--fixed-tabs .mdl-layout__tab-bar{
+	.mdl-layout--fixed-tabs .mdl-layout__tab-bar #tab1{
 		display:none;
 	}
-	.mdl-layout__tab-bar-container{
-		display:none;
-    }
+	// .mdl-layout__tab-bar-container{
+	// 	display:none;
+    // }
     
 }
 

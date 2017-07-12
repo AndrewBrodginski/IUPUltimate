@@ -12,3 +12,4 @@ require(['jquery'], function ($) {
 		console.log('requirejs ready to use')
 	})
 })
+
