@@ -9,24 +9,25 @@ main{
    width:100%;
 }
 
+
+//mobile css adjustment
 @media screen and (max-width: 1024px){
 	.mdl-layout--fixed-tabs .mdl-layout__tab-bar{
 		display:none;
 	}
 	.mdl-layout__tab-bar-container{
 		display:none;
-	}
+    }
+    
 }
 
 .main-card.mdl-card {
-    margin:50px;
-  width: 95%;
+  width: 100%;
   height:400px;
 }
 
 .twitter-card.mdl-card{
-    margin:50px;
-    width:80%;
+    width:98%;
     height:400px;
 }
 
