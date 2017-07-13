@@ -43,3 +43,12 @@ main{
 	z-index:0 !important;
     -webkit-overflow-scrolling: touch;
 }
+
+.mdl-layout__header{
+	background:url('{{slide_show.image4.image}}');
+}
+
+.mdl-layout__tab-bar{
+	background-color:#424242;
+			
+}
