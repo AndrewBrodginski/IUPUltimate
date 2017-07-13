@@ -23,12 +23,18 @@ main{
 
 .main-card.mdl-card {
   width: 100%;
-  height:400px;
+ height:400px;
+  //overflow-y:scroll;
 }
 
 .twitter-card.mdl-card{
     width:98%;
-    height:400px;
+    min-height:400px;
+    overflow-y:scroll;
+}
+
+.calendar-card.mdl-card{
+    width:100%;
 }
 
 .mdl-layout__content{
@@ -44,11 +50,4 @@ main{
     -webkit-overflow-scrolling: touch;
 }
 
-.mdl-layout__header{
-	background:url('{{slide_show.image4.image}}');
-}
 
-.mdl-layout__tab-bar{
-	background-color:#424242;
-			
-}
