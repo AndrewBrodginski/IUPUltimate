@@ -7,6 +7,10 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"1":fu
     + alias2(alias1((depth0 != null ? depth0.description : depth0), depth0))
     + "</li>\r\n          <li>"
     + alias2(alias1((depth0 != null ? depth0.team : depth0), depth0))
+    + "</li>\r\n          <li>"
+    + alias2(alias1((depth0 != null ? depth0.date : depth0), depth0))
+    + "</li>\r\n          <li>"
+    + alias2(alias1((depth0 != null ? depth0.time : depth0), depth0))
     + "</li>\r\n          <hr>\r\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {});
