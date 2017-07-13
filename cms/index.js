@@ -7,11 +7,6 @@
 		tab3: 'The Girls',
 		tab4: 'Join Our Team'
 	},
-	team: {
-		girls: '',
-		guys: '',
-		coed: ''
-	},
 	slide_show: {
 		image1: {
 			$image_type: 'image',
