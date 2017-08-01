@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>enduro.js page</title>
+	<title>IUP Ultimate</title>
 	<link rel="stylesheet" href="/assets/css/main.css">
 	<style type="text/css"></style>
 	<script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
@@ -14,9 +14,19 @@
 
 <body>
 	<style>
-		.mdl-layout__header{
+	/*	.mdl-layout__header{
 			background:url('/assets/img/photo4.jpeg');
-		}
+		} */
+
+    .mdl-layout__header{
+      background-color:#7c0306;
+    }
+    .mdl-layout.is-upgraded .mdl-layout__tab.is-active::after{
+      background: #7c0306; */
+    -webkit-animation: border-expand .2s cubic-bezier(.4,0,.4,1).01s alternate forwards;
+    animation: border-expand .2s cubic-bezier(.4,0,.4,1).01s alternate forwards;
+    transition: all 1s cubic-bezier(.4,0,1,1);
+    }
 
 		.mdl-layout__tab-bar{
 			background-color:#424242;
@@ -30,7 +40,7 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">IUP Ultimate Frisbee</span>
+      <a class="mdl-layout-title mdl-navigation__link" href="">IUP Ultimate Frisbee</span>
     </div>
     <!-- Tabs -->
     <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
@@ -40,14 +50,6 @@
 	  <a href="#fixed-tab-4" class="mdl-layout__tab">Join Our Team</a>
     </div>
   </header>
-  <div class="mdl-layout__drawer">
-    <a class="mdl-layout-title mdl-navigation__link" href="">IUP Ultimate Frisbee</a>
-	<nav class="mdl-navigation">
-		<a class="mdl-navigation__link" href="#fixed-tab-2">The Guys</a>
-		<a class="" href=""></a>
-		<a class="" href=""></a>	
-	</nav>
-  </div>
   <main class="mdl-layout__content">
     <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
       <div class="page-content"><div class="main-card mdl-card mdl-shadow--2dp main-card">
@@ -70,7 +72,8 @@
 </div></div>
     </section>
     <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-      <div class="page-content"></div>
+      <div class="page-content"><h1>Testing</h1>
+<h2>Sardonic the syndicated frequent Hobbes countries as November series Calvin.</h2></div>
     </section>
     <section class="mdl-layout__tab-panel" id="fixed-tab-3">
       <div class="page-content"></div>
@@ -83,9 +86,8 @@
 </div>
 
 
+<body></body>
 
-
-</body>
 
 
 </html>
