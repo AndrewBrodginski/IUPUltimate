@@ -7,6 +7,8 @@
 		tab3: 'The Girls',
 		tab4: 'Join Our Team'
 	},
+	maincolor: '#7C0306',
+	$maincolor_type: 'colorpicker',
 	slide_show: {
 		image1: {
 			$image_type: 'image',
@@ -36,6 +38,17 @@
 			time: '12:30 AM',
 			$date_value: '2017-07-05',
 			$time_value: '00:30:00'
+		},
+		{
+			title: 'Test Tourney',
+			description: 'Testing',
+			team: 'COed',
+			$date_type: 'date',
+			date: 'Thursday, 01 February, 2018',
+			$time_type: 'time',
+			time: '3:30 PM',
+			$date_value: '2018-02-01',
+			$time_value: '15:30:00'
 		},
 		{
 			title: 'Fighting Squirrels Tournament',

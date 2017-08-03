@@ -10,12 +10,15 @@
 	<link rel="stylesheet" href="\assets\vendor\material-design-lite\material.min.css">
 <script src="/assets/vendor/material-design-lite/material.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="https://use.fontawesome.com/d0e47f0c64.js"></script>
 </head>
 
 <body>
   <style>
     .mdl-layout__header{
-	background:url('{{slide_show.image4.image}}');
+	{{!-- background:url('{{slide_show.image4.image}}'); --}}
+  background-color:{{maincolor}}
+  
 }
 
 .mdl-layout__tab-bar{
@@ -23,8 +26,8 @@
 			
 }
   </style>
-	
-	<!-- Simple header with fixed tabs. -->
+
+	  <!-- Simple header with fixed tabs. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
             mdl-layout--fixed-tabs">
   <header class="mdl-layout__header">
@@ -47,17 +50,17 @@
       <div class="page-content">{{> _main}}</div>
     </section>
     <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-      <div id="the-guys-content"class="page-content">{{> _the-guys}}</div>
+      <div class="page-content">{{> _the-guys}}</div>
     </section>
     <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-      <div class="page-content">{{the-girls}}</div>
+      <div class="page-content">{{> _the-girls}}</div>
     </section>
-	<section class="mdl-layout__tab-panel" id="fixed-tab-3">
-      <div class="page-content">{{join-page}}</div>
+	<section class="mdl-layout__tab-panel" id="fixed-tab-4">
+      <div class="page-content">{{> _join-page}}</div>
     </section>
 	
   </main>
-</div>
+</div>    
 
 </body>
 
