@@ -1,23 +1,32 @@
-
 <script>
-var slideIndex = 0;
-carousel();
+  $(function(){
+    $("#slideshow > div:gt(0)").hide();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none"; 
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1} 
-    x[slideIndex-1].style.display = "block"; 
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
+  setInterval(function () {
+    $('#slideshow > div:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('#slideshow');
+  }, 3000);
+
+  });
 </script>
 <style>
-  .mySlides{
-    display:none;
+  #slideshow {
+    margin: 80px auto;
+    position: relative;
+    padding: 10px;
+
+  }
+
+  #slideshow>div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
   }
 </style>
 
@@ -28,15 +37,15 @@ function carousel() {
         <h2 class="mdl-card__title-text">{{main_title}}</h2>
       </div>
       <div class="mdl-card__supporting-text">
-        
+
       </div>
       <div class="mdl-card__actions mdl-card--border">
         <h5>Interested in joining?</h5> <button id="joinBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect js-link" link="{{> _join-page}}">Click Here!</button>
       </div>
       <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-link" link="{{> _join-page}}"/>
-      <i class="material-icons">share</i>
-    </button>
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-link" link="{{> _join-page}}" />
+        <i class="material-icons">share</i>
+        </button>
       </div>
     </div>
   </div>
@@ -44,7 +53,7 @@ function carousel() {
     <div class="twitter-card mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title">
         <h2 class="mdl-card__title-text">Calendar Events</h2>
-        
+
       </div>
       <div class="mdl-card__actions mdl-card--border"></div>
       <div class="events">
@@ -54,30 +63,36 @@ function carousel() {
             <i class="fa fa-calendar" aria-hidden="true"></i> {{this.date}} @ {{this.time}}
           </div>
           <div class="event_info">
-            Tournament: {{this.title}} <br/>
-            Description:{{this.description}} <br/>
-            Team Playing: {{this.team}}<br/>
+            Tournament: {{this.title}} <br/> Description:{{this.description}} <br/> Team Playing: {{this.team}}<br/>
           </div>
         </div>
-        <hr/>
+        <hr/> 
         {{/each}}
       </div>
     </div>
   </div>
-  {{!-- <div class="mdl-cell mdl-cell--12-col">
+  {{!--
+  <div class="mdl-cell mdl-cell--12-col">
     <div class="calendar-card mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title">
         <h2 class="mdl-card__title-text">Something</h2>
       </div>
       <span class="mdl-card__actions mdl-card--border"></span>
-      
+
     </div>
   </div> --}}
-<div style="max-width:500px">
-  {{#each slide_show}}
-  <img class="mySlides" src="{{image}}" style="width:100%">
-  
-  {{/each}}
-</div>
+  <div class="main-card mdl-card mdl-shadow--2dp">
 
+    <div class="mdl-card__title">
+          <div id="slideshow">
+
+      {{#each slide_show}}
+      <div>
+          <img src="{{this.image}}" style="height:150px; width:300px;" >
+      </div>
+      {{/each}}
+  
+  </div>
+    </div>
+  </div>
 </div>

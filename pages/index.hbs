@@ -72,12 +72,34 @@
 
  <script>
   $(function(){
-
+      console.log("hey");
       $('.js-link').click(function(){
          $('.page-content').html($(this).attr('link'));
       });
+
+
   });
 </script>
+
+<Script>
+  Handlebars.registerHelper('teamsort', function(items, team){
+    var x = 0, len = items.length, s = "<ul>";
+    
+    for(x; x < len; x++){
+      var t = Handlebars.escapeExpression(items[x].Team.toLowerCase());
+      var item = Handlebars.escapeExpression(this);
+      if(team = "guys" ){
+        s+= "<li></li>"
+      }else if(team = "girls"){
+
+      }else if(team = "coed")
+
+      }else{
+        // return all
+      }
+    }
+  })
+</Script>
 
 <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -89,25 +111,24 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link js-link" link="{{> _the-guys}}">The Guys</a>
-        <a class="mdl-navigation__link js-link" link="{{> _the-girls}}">The Girls</a>
-        <a class="mdl-navigation__link js-link" link="{{> _join-page}}">Join the Team!</a>
+        <a class="mdl-navigation__link js-link" link="{{> _the-guys}}">{{tab_names.tab2}}</a>
+        <a class="mdl-navigation__link js-link" link="{{> _the-girls}}">{{tab_names.tab3}}</a>
+        <a class="mdl-navigation__link js-link" link="{{> _join-page}}">{{tab_names.tab4}}</a>
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <a href="" class="mdl-layout-title mdl-navigation__link">{{application_name}}</span>
+    <span class="mdl-layout-title mdl-navigation__link"><a href="" style="background-color:transparent;text-decoration:none; color:gray;">{{application_name}}</a></span>
     <nav class="mdl-navigation">
-        <a class="mdl-navigation__link js-link" link="{{> _the-guys}}">The Guys</a>
-        <a class="mdl-navigation__link js-link" link="{{> _the-girls}}">The Girls</a>
-        <a class="mdl-navigation__link js-link" link="{{> _join-page}}">Join the Team!</a>
+        <a class="mdl-navigation__link js-link" link="{{> _the-guys}}">{{tab_names.tab2}}</a>
+        <a class="mdl-navigation__link js-link" link="{{> _the-girls}}">{{tab_names.tab3}}</a>
+        <a class="mdl-navigation__link js-link" link="{{> _join-page}}">{{tab_names.tab4}}</a>
     </nav>
   </div>
       <main class="mdl-layout__content">
         <div class="page-content">{{> _main}}</div>
       </main>
 </div> 
-
 </body>
 
 </html>

@@ -17,7 +17,7 @@
 <body>
   <style>
     .mdl-layout__header{
-  background-color:#7C0306
+  background-color:#800000
   
 }
 
@@ -38,12 +38,34 @@
 
  <script>
   $(function(){
-
+      console.log("hey");
       $('.js-link').click(function(){
          $('.page-content').html($(this).attr('link'));
       });
+
+
   });
 </script>
+
+<Script>
+  Handlebars.registerHelper('teamsort', function(items, team){
+    var x = 0, len = items.length, s = "<ul>";
+    
+    for(x; x < len; x++){
+      var t = Handlebars.escapeExpression(items[x].Team.toLowerCase());
+      var item = Handlebars.escapeExpression(this);
+      if(team = "guys" ){
+        s+= "<li></li>"
+      }else if(team = "girls"){
+
+      }else if(team = "coed")
+
+      }else{
+        // return all
+      }
+    }
+  })
+</Script>
 
 <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -57,39 +79,48 @@
       <nav class="mdl-navigation mdl-layout--large-screen-only">
         <a class="mdl-navigation__link js-link" link="<h1>The Guys</h1>">The Guys</a>
         <a class="mdl-navigation__link js-link" link="<h1>Girls Page</h1>">The Girls</a>
-        <a class="mdl-navigation__link js-link" link="<h1>Join Page</h1>">Join the Team!</a>
+        <a class="mdl-navigation__link js-link" link="<h1>Join Page</h1>">Join Our Team</a>
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <a href="" class="mdl-layout-title mdl-navigation__link">IUP Ultimate Frisbee</span>
+    <span class="mdl-layout-title mdl-navigation__link"><a href="" style="background-color:transparent;text-decoration:none; color:gray;">IUP Ultimate Frisbee</a></span>
     <nav class="mdl-navigation">
         <a class="mdl-navigation__link js-link" link="<h1>The Guys</h1>">The Guys</a>
         <a class="mdl-navigation__link js-link" link="<h1>Girls Page</h1>">The Girls</a>
-        <a class="mdl-navigation__link js-link" link="<h1>Join Page</h1>">Join the Team!</a>
+        <a class="mdl-navigation__link js-link" link="<h1>Join Page</h1>">Join Our Team</a>
     </nav>
   </div>
       <main class="mdl-layout__content">
-        <div class="page-content">
-<script>
-var slideIndex = 0;
-carousel();
+        <div class="page-content"><script>
+  $(function(){
+    $("#slideshow > div:gt(0)").hide();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none"; 
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1} 
-    x[slideIndex-1].style.display = "block"; 
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
+  setInterval(function () {
+    $('#slideshow > div:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('#slideshow');
+  }, 3000);
+
+  });
 </script>
 <style>
-  .mySlides{
-    display:none;
+  #slideshow {
+    margin: 80px auto;
+    position: relative;
+    padding: 10px;
+
+  }
+
+  #slideshow>div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
   }
 </style>
 
@@ -100,15 +131,15 @@ function carousel() {
         <h2 class="mdl-card__title-text">Welcome to the IUP Ultimate Frisbee Page!</h2>
       </div>
       <div class="mdl-card__supporting-text">
-        
+
       </div>
       <div class="mdl-card__actions mdl-card--border">
         <h5>Interested in joining?</h5> <button id="joinBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect js-link" link="<h1>Join Page</h1>">Click Here!</button>
       </div>
       <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-link" link="<h1>Join Page</h1>"/>
-      <i class="material-icons">share</i>
-    </button>
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-link" link="<h1>Join Page</h1>" />
+        <i class="material-icons">share</i>
+        </button>
       </div>
     </div>
   </div>
@@ -116,7 +147,7 @@ function carousel() {
     <div class="twitter-card mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title">
         <h2 class="mdl-card__title-text">Calendar Events</h2>
-        
+
       </div>
       <div class="mdl-card__actions mdl-card--border"></div>
       <div class="events">
@@ -125,52 +156,55 @@ function carousel() {
             <i class="fa fa-calendar" aria-hidden="true"></i> Wednesday, 05 July, 2017 @ 12:30 AM
           </div>
           <div class="event_info">
-            Tournament: Suh Dude Tourney <br/>
-            Description:RECYCLE THE STACK! <br/>
-            Team Playing: Guys<br/>
+            Tournament: Suh Dude Tourney <br/> Description:RECYCLE THE STACK! <br/> Team Playing: Guys<br/>
           </div>
         </div>
-        <hr/>
+        <hr/> 
         <div class="event">
           <div class="date">
             <i class="fa fa-calendar" aria-hidden="true"></i> Thursday, 01 February, 2018 @ 3:30 PM
           </div>
           <div class="event_info">
-            Tournament: Test Tourney <br/>
-            Description:Testing <br/>
-            Team Playing: COed<br/>
+            Tournament: Test Tourney <br/> Description:Testing <br/> Team Playing: COed<br/>
           </div>
         </div>
-        <hr/>
+        <hr/> 
         <div class="event">
           <div class="date">
             <i class="fa fa-calendar" aria-hidden="true"></i> Monday, 11 September, 2017 @ 10:00 PM
           </div>
           <div class="event_info">
-            Tournament: Fighting Squirrels Tournament <br/>
-            Description:Begin <br/>
-            Team Playing: Coed<br/>
+            Tournament: Fighting Squirrels Tournament <br/> Description:Begin <br/> Team Playing: Coed<br/>
           </div>
         </div>
-        <hr/>
+        <hr/> 
       </div>
     </div>
   </div>
-<div style="max-width:500px">
-  <img class="mySlides" src="/assets/img/photo1.jpeg" style="width:100%">
-  
-  <img class="mySlides" src="/assets/img/photo2.jpeg" style="width:100%">
-  
-  <img class="mySlides" src="/assets/img/photo3.jpeg" style="width:100%">
-  
-  <img class="mySlides" src="/assets/img/photo4.jpeg" style="width:100%">
-  
-</div>
+  <div class="main-card mdl-card mdl-shadow--2dp">
 
+    <div class="mdl-card__title">
+          <div id="slideshow">
+
+      <div>
+          <img src="/assets/img/photo1.jpeg" style="height:150px; width:300px;" >
+      </div>
+      <div>
+          <img src="/assets/img/photo2.jpeg" style="height:150px; width:300px;" >
+      </div>
+      <div>
+          <img src="/assets/img/photo3.jpeg" style="height:150px; width:300px;" >
+      </div>
+      <div>
+          <img src="/assets/img/photo4.jpeg" style="height:150px; width:300px;" >
+      </div>
+  
+  </div>
+    </div>
+  </div>
 </div></div>
       </main>
 </div> 
-
 </body>
 
 </html>

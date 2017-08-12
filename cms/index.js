@@ -7,7 +7,7 @@
 		tab3: 'The Girls',
 		tab4: 'Join Our Team'
 	},
-	maincolor: '#7C0306',
+	maincolor: '#800000',
 	$maincolor_type: 'colorpicker',
 	slide_show: [
 		{
@@ -37,7 +37,7 @@
 			$time_type: 'time',
 			time: '12:30 AM',
 			$date_value: '2017-07-05',
-			$time_value: '00:30:00'
+			$time_value: '00:30:00',
 		},
 		{
 			title: 'Test Tourney',
