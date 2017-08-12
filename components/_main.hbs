@@ -1,11 +1,25 @@
- <script>
-  $(function(){
-      $('.js-link').click(function(){
-        console.log("clicked");
-        $('.page-content').html($(this).attr('link'));
-      });
-  });
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
 </script>
+<style>
+  .mySlides{
+    display:none;
+  }
+</style>
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--8-col">
@@ -17,7 +31,7 @@
         
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <h5>Interested in joining?</h5> <button id="joinBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect">Click Here!</button>
+        <h5>Interested in joining?</h5> <button id="joinBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect js-link" link="{{> _join-page}}">Click Here!</button>
       </div>
       <div class="mdl-card__menu">
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-link" link="{{> _join-page}}"/>
@@ -59,5 +73,11 @@
       
     </div>
   </div> --}}
+<div style="max-width:500px">
+  {{#each slide_show}}
+  <img class="mySlides" src="{{image}}" style="width:100%">
+  
+  {{/each}}
+</div>
 
 </div>

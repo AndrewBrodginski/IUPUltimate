@@ -9,24 +9,24 @@
 	},
 	maincolor: '#7C0306',
 	$maincolor_type: 'colorpicker',
-	slide_show: {
-		image1: {
+	slide_show: [
+		{
 			$image_type: 'image',
 			image: '/assets/img/photo1.jpeg'
 		},
-		image2: {
+		{
 			$image_type: 'image',
 			image: '/assets/img/photo2.jpeg'
 		},
-		image3: {
+		{
 			$image_type: 'image',
 			image: '/assets/img/photo3.jpeg'
 		},
-		image4: {
+		{
 			$image_type: 'image',
 			image: '/assets/img/photo4.jpeg'
 		}
-	},
+	],
 	Upcoming_Events: [
 		{
 			title: 'Suh Dude Tourney',

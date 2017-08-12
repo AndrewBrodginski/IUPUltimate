@@ -3,6 +3,7 @@
 
 <head>
 	<title>IUP - Ultimate Frisbee and Fun</title>
+  <meta http-equiv="Pragma" content="no-cache">
 	<link rel="stylesheet" href="/assets/css/main.css">
 	<style type="text/css"></style>
 	<script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
@@ -26,6 +27,7 @@
 
 }
 
+
 .mdl-layout__tab-bar{
 	background-color:#424242;
 			
@@ -36,9 +38,9 @@
 
  <script>
   $(function(){
+
       $('.js-link').click(function(){
-        console.log("clicked");
-        $('.page-content').html($(this).attr('link'));
+         $('.page-content').html($(this).attr('link'));
       });
   });
 </script>
@@ -60,22 +62,36 @@
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">IUP Ultimate Frisbee</span>
+    <a href="" class="mdl-layout-title mdl-navigation__link">IUP Ultimate Frisbee</span>
     <nav class="mdl-navigation">
         <a class="mdl-navigation__link js-link" link="<h1>The Guys</h1>">The Guys</a>
         <a class="mdl-navigation__link js-link" link="<h1>Girls Page</h1>">The Girls</a>
         <a class="mdl-navigation__link js-link" link="<h1>Join Page</h1>">Join the Team!</a>
     </nav>
   </div>
-  <main class="mdl-layout__content">
-    <div class="page-content"> <script>
-  $(function(){
-      $('.js-link').click(function(){
-        console.log("clicked");
-        $('.page-content').html($(this).attr('link'));
-      });
-  });
+      <main class="mdl-layout__content">
+        <div class="page-content">
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
 </script>
+<style>
+  .mySlides{
+    display:none;
+  }
+</style>
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--8-col">
@@ -87,7 +103,7 @@
         
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <h5>Interested in joining?</h5> <button id="joinBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect">Click Here!</button>
+        <h5>Interested in joining?</h5> <button id="joinBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect js-link" link="<h1>Join Page</h1>">Click Here!</button>
       </div>
       <div class="mdl-card__menu">
         <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-link" link="<h1>Join Page</h1>"/>
@@ -140,12 +156,21 @@
       </div>
     </div>
   </div>
+<div style="max-width:500px">
+  <img class="mySlides" src="/assets/img/photo1.jpeg" style="width:100%">
+  
+  <img class="mySlides" src="/assets/img/photo2.jpeg" style="width:100%">
+  
+  <img class="mySlides" src="/assets/img/photo3.jpeg" style="width:100%">
+  
+  <img class="mySlides" src="/assets/img/photo4.jpeg" style="width:100%">
+  
+</div>
 
 </div></div>
-  </main>
+      </main>
 </div> 
 
 </body>
-
 
 </html>
