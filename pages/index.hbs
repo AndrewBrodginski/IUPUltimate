@@ -21,6 +21,12 @@
   
 }
 
+.mdl-navigation__link{
+  cursor:pointer;
+
+
+}
+
 .mdl-layout__tab-bar{
 	background-color:#424242;
 			
@@ -28,7 +34,7 @@
   </style>
 
 	  <!-- Simple header with fixed tabs. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+ {{!-- <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
             mdl-layout--fixed-tabs">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
@@ -60,7 +66,45 @@
     </section>
 	
   </main>
-</div>    
+</div>      --}}
+
+ <script>
+  $(function(){
+      $('.js-link').click(function(){
+        console.log("clicked");
+        $('.page-content').html($(this).attr('link'));
+      });
+  });
+</script>
+
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <a href="" class="mdl-layout-title mdl-navigation__link">{{application_name}}</a>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link js-link" link="{{> _the-guys}}">The Guys</a>
+        <a class="mdl-navigation__link js-link" link="{{> _the-girls}}">The Girls</a>
+        <a class="mdl-navigation__link js-link" link="{{> _join-page}}">Join the Team!</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">{{application_name}}</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link js-link" link="{{> _the-guys}}">The Guys</a>
+        <a class="mdl-navigation__link js-link" link="{{> _the-girls}}">The Girls</a>
+        <a class="mdl-navigation__link js-link" link="{{> _join-page}}">Join the Team!</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">{{> _main}}</div>
+  </main>
+</div> 
 
 </body>
 

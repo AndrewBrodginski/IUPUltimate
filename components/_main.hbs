@@ -1,3 +1,11 @@
+ <script>
+  $(function(){
+      $('.js-link').click(function(){
+        console.log("clicked");
+        $('.page-content').html($(this).attr('link'));
+      });
+  });
+</script>
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--8-col">
@@ -12,7 +20,7 @@
         <h5>Interested in joining?</h5> <button id="joinBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect">Click Here!</button>
       </div>
       <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-link" link="{{> _join-page}}"/>
       <i class="material-icons">share</i>
     </button>
       </div>

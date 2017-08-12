@@ -20,6 +20,12 @@
   
 }
 
+.mdl-navigation__link{
+  cursor:pointer;
+
+
+}
+
 .mdl-layout__tab-bar{
 	background-color:#424242;
 			
@@ -27,26 +33,50 @@
   </style>
 
 	  <!-- Simple header with fixed tabs. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
-            mdl-layout--fixed-tabs">
+
+ <script>
+  $(function(){
+      $('.js-link').click(function(){
+        console.log("clicked");
+        $('.page-content').html($(this).attr('link'));
+      });
+  });
+</script>
+
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class=""><a class="mdl-layout-title mdl-navigation__link" href="">IUP Ultimate Frisbee</a></span>
-    </div>
-
-    <!-- Tabs -->
-    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-      <a id="tab1" href="#fixed-tab-1" class="mdl-layout__tab is-active">IUP Ultimate Frisbee</a>
-      <a id="tab2" href="#fixed-tab-2" class="mdl-layout__tab">The Guys</a>
-      <a id="tab3" href="#fixed-tab-3" class="mdl-layout__tab">The Girls</a>
-	    <a id="tab4" href="#fixed-tab-4" class="mdl-layout__tab">Join Our Team</a>
+      <a href="" class="mdl-layout-title mdl-navigation__link">IUP Ultimate Frisbee</a>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link js-link" link="<h1>The Guys</h1>">The Guys</a>
+        <a class="mdl-navigation__link js-link" link="<h1>Girls Page</h1>">The Girls</a>
+        <a class="mdl-navigation__link js-link" link="<h1>Join Page</h1>">Join the Team!</a>
+      </nav>
     </div>
   </header>
-
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">IUP Ultimate Frisbee</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link js-link" link="<h1>The Guys</h1>">The Guys</a>
+        <a class="mdl-navigation__link js-link" link="<h1>Girls Page</h1>">The Girls</a>
+        <a class="mdl-navigation__link js-link" link="<h1>Join Page</h1>">Join the Team!</a>
+    </nav>
+  </div>
   <main class="mdl-layout__content">
-    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
-      <div class="page-content">
+    <div class="page-content"> <script>
+  $(function(){
+      $('.js-link').click(function(){
+        console.log("clicked");
+        $('.page-content').html($(this).attr('link'));
+      });
+  });
+</script>
+
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--8-col">
     <div class="main-card mdl-card mdl-shadow--2dp">
@@ -60,7 +90,7 @@
         <h5>Interested in joining?</h5> <button id="joinBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect">Click Here!</button>
       </div>
       <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-link" link="<h1>Join Page</h1>"/>
       <i class="material-icons">share</i>
     </button>
       </div>
@@ -112,19 +142,8 @@
   </div>
 
 </div></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-      <div class="page-content"><h1>The Guys</h1></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-      <div class="page-content"><h1>Girls Page</h1></div>
-    </section>
-	<section class="mdl-layout__tab-panel" id="fixed-tab-4">
-      <div class="page-content"><h1>Join Page</h1></div>
-    </section>
-	
   </main>
-</div>    
+</div> 
 
 </body>
 
