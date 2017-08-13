@@ -37,12 +37,12 @@
 			$time_type: 'time',
 			time: '12:30 AM',
 			$date_value: '2017-07-05',
-			$time_value: '00:30:00',
+			$time_value: '00:30:00'
 		},
 		{
 			title: 'Test Tourney',
 			description: 'Testing',
-			team: 'COed',
+			team: 'Guys',
 			$date_type: 'date',
 			date: 'Thursday, 01 February, 2018',
 			$time_type: 'time',
@@ -53,13 +53,24 @@
 		{
 			title: 'Fighting Squirrels Tournament',
 			description: 'Begin',
-			team: 'Coed',
+			team: 'Guys',
 			$date_type: 'date',
 			date: 'Monday, 11 September, 2017',
 			$time_type: 'time',
 			time: '10:00 PM',
 			$date_value: '2017-09-11',
 			$time_value: '22:00:00'
+		},
+		{
+			title: 'Girls Test',
+			description: 'Girls Tourney',
+			team: 'Girls',
+			$date_type: 'date',
+			date: 'Sunday, 13 August, 2017',
+			$time_type: 'time',
+			time: '12:30 AM',
+			$date_value: '2017-08-13',
+			$time_value: '00:30:00'
 		}
 	]
 }

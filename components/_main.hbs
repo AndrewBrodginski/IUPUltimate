@@ -1,24 +1,24 @@
 <script>
-  $(function(){
+  $(function () {
     $("#slideshow > div:gt(0)").hide();
 
-  setInterval(function () {
-    $('#slideshow > div:first')
-      .fadeOut(1000)
-      .next()
-      .fadeIn(1000)
-      .end()
-      .appendTo('#slideshow');
-  }, 3000);
+    setInterval(function () {
+      $('#slideshow > div:first')
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .end()
+        .appendTo('#slideshow');
+    }, 3000);
 
   });
+
 </script>
 <style>
   #slideshow {
     margin: 80px auto;
     position: relative;
     padding: 10px;
-
   }
 
   #slideshow>div {
@@ -57,16 +57,18 @@
       </div>
       <div class="mdl-card__actions mdl-card--border"></div>
       <div class="events">
-        {{#each Upcoming_Events}}
+        {{#each Upcoming_Events as |event|}}
+          {{#ifTeam event 'Guys'}}  
         <div class="event">
           <div class="date">
             <i class="fa fa-calendar" aria-hidden="true"></i> {{this.date}} @ {{this.time}}
           </div>
           <div class="event_info">
-            Tournament: {{this.title}} <br/> Description:{{this.description}} <br/> Team Playing: {{this.team}}<br/>
+            Tournament: {{this.title}} <br/> Description:{{event.description}} <br/> Team Playing: {{this.team}}<br/>
           </div>
         </div>
-        <hr/> 
+                <hr/> 
+          {{/ifTeam}}  
         {{/each}}
       </div>
     </div>
@@ -84,15 +86,15 @@
   <div class="main-card mdl-card mdl-shadow--2dp">
 
     <div class="mdl-card__title">
-          <div id="slideshow">
+      <div id="slideshow">
 
-      {{#each slide_show}}
-      <div>
-          <img src="{{this.image}}" style="height:150px; width:300px;" >
+        {{#each slide_show}}
+        <div>
+          <img src="{{this.image}}" style="height:150px; width:300px;">
+        </div>
+        {{/each}}
+
       </div>
-      {{/each}}
-  
-  </div>
     </div>
   </div>
 </div>

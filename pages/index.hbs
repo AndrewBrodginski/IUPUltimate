@@ -81,25 +81,6 @@
   });
 </script>
 
-<Script>
-  Handlebars.registerHelper('teamsort', function(items, team){
-    var x = 0, len = items.length, s = "<ul>";
-    
-    for(x; x < len; x++){
-      var t = Handlebars.escapeExpression(items[x].Team.toLowerCase());
-      var item = Handlebars.escapeExpression(this);
-      if(team = "guys" ){
-        s+= "<li></li>"
-      }else if(team = "girls"){
-
-      }else if(team = "coed")
-
-      }else{
-        // return all
-      }
-    }
-  })
-</Script>
 
 <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">

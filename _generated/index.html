@@ -47,25 +47,6 @@
   });
 </script>
 
-<Script>
-  Handlebars.registerHelper('teamsort', function(items, team){
-    var x = 0, len = items.length, s = "<ul>";
-    
-    for(x; x < len; x++){
-      var t = Handlebars.escapeExpression(items[x].Team.toLowerCase());
-      var item = Handlebars.escapeExpression(this);
-      if(team = "guys" ){
-        s+= "<li></li>"
-      }else if(team = "girls"){
-
-      }else if(team = "coed")
-
-      }else{
-        // return all
-      }
-    }
-  })
-</Script>
 
 <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -93,26 +74,26 @@
   </div>
       <main class="mdl-layout__content">
         <div class="page-content"><script>
-  $(function(){
+  $(function () {
     $("#slideshow > div:gt(0)").hide();
 
-  setInterval(function () {
-    $('#slideshow > div:first')
-      .fadeOut(1000)
-      .next()
-      .fadeIn(1000)
-      .end()
-      .appendTo('#slideshow');
-  }, 3000);
+    setInterval(function () {
+      $('#slideshow > div:first')
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .end()
+        .appendTo('#slideshow');
+    }, 3000);
 
   });
+
 </script>
 <style>
   #slideshow {
     margin: 80px auto;
     position: relative;
     padding: 10px;
-
   }
 
   #slideshow>div {
@@ -159,47 +140,47 @@
             Tournament: Suh Dude Tourney <br/> Description:RECYCLE THE STACK! <br/> Team Playing: Guys<br/>
           </div>
         </div>
-        <hr/> 
+                <hr/> 
         <div class="event">
           <div class="date">
             <i class="fa fa-calendar" aria-hidden="true"></i> Thursday, 01 February, 2018 @ 3:30 PM
           </div>
           <div class="event_info">
-            Tournament: Test Tourney <br/> Description:Testing <br/> Team Playing: COed<br/>
+            Tournament: Test Tourney <br/> Description:Testing <br/> Team Playing: Guys<br/>
           </div>
         </div>
-        <hr/> 
+                <hr/> 
         <div class="event">
           <div class="date">
             <i class="fa fa-calendar" aria-hidden="true"></i> Monday, 11 September, 2017 @ 10:00 PM
           </div>
           <div class="event_info">
-            Tournament: Fighting Squirrels Tournament <br/> Description:Begin <br/> Team Playing: Coed<br/>
+            Tournament: Fighting Squirrels Tournament <br/> Description:Begin <br/> Team Playing: Guys<br/>
           </div>
         </div>
-        <hr/> 
+                <hr/> 
       </div>
     </div>
   </div>
   <div class="main-card mdl-card mdl-shadow--2dp">
 
     <div class="mdl-card__title">
-          <div id="slideshow">
+      <div id="slideshow">
 
-      <div>
-          <img src="/assets/img/photo1.jpeg" style="height:150px; width:300px;" >
+        <div>
+          <img src="/assets/img/photo1.jpeg" style="height:150px; width:300px;">
+        </div>
+        <div>
+          <img src="/assets/img/photo2.jpeg" style="height:150px; width:300px;">
+        </div>
+        <div>
+          <img src="/assets/img/photo3.jpeg" style="height:150px; width:300px;">
+        </div>
+        <div>
+          <img src="/assets/img/photo4.jpeg" style="height:150px; width:300px;">
+        </div>
+
       </div>
-      <div>
-          <img src="/assets/img/photo2.jpeg" style="height:150px; width:300px;" >
-      </div>
-      <div>
-          <img src="/assets/img/photo3.jpeg" style="height:150px; width:300px;" >
-      </div>
-      <div>
-          <img src="/assets/img/photo4.jpeg" style="height:150px; width:300px;" >
-      </div>
-  
-  </div>
     </div>
   </div>
 </div></div>
