@@ -12,19 +12,23 @@
 	slide_show: [
 		{
 			$image_type: 'image',
-			image: '/assets/img/photo1.jpeg'
+			image: '/assets/img/photo1.jpeg',
+			description: 'Cool Field'
 		},
 		{
 			$image_type: 'image',
-			image: '/assets/img/photo2.jpeg'
+			image: '/assets/img/photo2.jpeg',
+			description: 'Some Players'
 		},
 		{
 			$image_type: 'image',
-			image: '/assets/img/photo3.jpeg'
+			image: '/assets/img/photo3.jpeg',
+			description: 'Running From My Problems'
 		},
 		{
 			$image_type: 'image',
-			image: '/assets/img/photo4.jpeg'
+			image: '/assets/img/photo4.jpeg',
+			description: 'Lines'
 		}
 	],
 	Upcoming_Events: [

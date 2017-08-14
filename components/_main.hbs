@@ -1,5 +1,3 @@
-
-
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--8-col">
     <div class="main-card mdl-card mdl-shadow--2dp">
@@ -27,8 +25,7 @@
       </div>
       <div class="mdl-card__actions mdl-card--border"></div>
       <div class="events">
-        {{#each Upcoming_Events as |event|}}
-          {{#ifTeam event 'Guys'}}  
+        {{#each Upcoming_Events as |event|}} {{#ifTeam event 'Guys'}}
         <div class="event">
           <div class="date">
             <i class="fa fa-calendar" aria-hidden="true"></i> {{this.date}} @ {{this.time}}
@@ -37,9 +34,7 @@
             Tournament: {{this.title}} <br/> Description:{{event.description}} <br/> Team Playing: {{this.team}}<br/>
           </div>
         </div>
-                <hr/> 
-          {{/ifTeam}}  
-        {{/each}}
+        <hr/> {{/ifTeam}} {{/each}}
       </div>
     </div>
   </div>
@@ -54,23 +49,63 @@
     </div>
   </div> --}}
 
-<div class="mdl-cell mdl-cell--12-col">
-  <div id="slideshow-card" class="main-card mdl-card mdl-shadow--2dp">
+  <div class="mdl-cell mdl-cell--8-col">
+    <div id="slideshow-card" class="main-card mdl-card mdl-shadow--2dp">
 
-    <div class="mdl-card__title">
-      <h2 class="mdl-card__title-text">Team Slideshow</h2>
-    </div>
-    <div class="mdl-card__actions mdl-card--border"></div>
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Team Slideshow</h2>
+      </div>
+      <div class="mdl-card__actions mdl-card--border"></div>
+      {{!--
       <div id="slideshow">
-          <img src="assets/img/photo2.jpeg">
-        {{!-- {{#each slide_show}}
+        <img src="assets/img/photo2.jpeg"> {{!-- {{#each slide_show}}
         <div>
           <img src="{{this.image}}">
         </div>
-        {{/each}} --}}
+        {{/each}}
 
+      </div> --}}
+      <div class="slideshow-container">
+        {{#each slide_show}}
+        <div class="mySlides fade">
+          <img src="{{image}}" style="width:100%">
+          <div class="text">{{description}}</div>
+        </div>
+        {{/each}}
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
+      <br>
+
+      <div style="text-align:center">
+        {{#each slide_show}}
+        <span class="dot" onclick="currentSlide{{@key}}"></span>
+
+        {{/each}}
+      </div>
+
     </div>
   </div>
-  </div>
 </div>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>

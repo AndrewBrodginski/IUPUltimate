@@ -71,9 +71,7 @@
     </nav>
   </div>
       <main class="mdl-layout__content">
-        <div class="page-content">
-
-<div class="mdl-grid">
+        <div class="page-content"><div class="mdl-grid">
   <div class="mdl-cell mdl-cell--8-col">
     <div class="main-card mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title">
@@ -100,6 +98,7 @@
       </div>
       <div class="mdl-card__actions mdl-card--border"></div>
       <div class="events">
+         
         <div class="event">
           <div class="date">
             <i class="fa fa-calendar" aria-hidden="true"></i> Wednesday, 05 July, 2017 @ 12:30 AM
@@ -108,7 +107,7 @@
             Tournament: Suh Dude Tourney <br/> Description:RECYCLE THE STACK! <br/> Team Playing: Guys<br/>
           </div>
         </div>
-                <hr/> 
+        <hr/>   
         <div class="event">
           <div class="date">
             <i class="fa fa-calendar" aria-hidden="true"></i> Thursday, 01 February, 2018 @ 3:30 PM
@@ -117,7 +116,7 @@
             Tournament: Test Tourney <br/> Description:Testing <br/> Team Playing: Guys<br/>
           </div>
         </div>
-                <hr/> 
+        <hr/>   
         <div class="event">
           <div class="date">
             <i class="fa fa-calendar" aria-hidden="true"></i> Monday, 11 September, 2017 @ 10:00 PM
@@ -126,26 +125,76 @@
             Tournament: Fighting Squirrels Tournament <br/> Description:Begin <br/> Team Playing: Guys<br/>
           </div>
         </div>
-                <hr/> 
+        <hr/>    
       </div>
     </div>
   </div>
 
-<div class="mdl-cell mdl-cell--12-col">
-  <div id="slideshow-card" class="main-card mdl-card mdl-shadow--2dp">
+  <div class="mdl-cell mdl-cell--8-col">
+    <div id="slideshow-card" class="main-card mdl-card mdl-shadow--2dp">
 
-    <div class="mdl-card__title">
-      <h2 class="mdl-card__title-text">Team Slideshow</h2>
-    </div>
-    <div class="mdl-card__actions mdl-card--border"></div>
-      <div id="slideshow">
-          <img src="assets/img/photo2.jpeg">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Team Slideshow</h2>
+      </div>
+      <div class="mdl-card__actions mdl-card--border"></div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="/assets/img/photo1.jpeg" style="width:100%">
+          <div class="text">Cool Field</div>
+        </div>
+        <div class="mySlides fade">
+          <img src="/assets/img/photo2.jpeg" style="width:100%">
+          <div class="text">Some Players</div>
+        </div>
+        <div class="mySlides fade">
+          <img src="/assets/img/photo3.jpeg" style="width:100%">
+          <div class="text">Running From My Problems</div>
+        </div>
+        <div class="mySlides fade">
+          <img src="/assets/img/photo4.jpeg" style="width:100%">
+          <div class="text">Lines</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide0"></span>
+
+        <span class="dot" onclick="currentSlide1"></span>
+
+        <span class="dot" onclick="currentSlide2"></span>
+
+        <span class="dot" onclick="currentSlide3"></span>
 
       </div>
+
     </div>
   </div>
-  </div>
-</div></div>
+</div>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script></div>
       </main>
 </div> 
 </body>
