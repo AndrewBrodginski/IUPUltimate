@@ -1,5 +1,6 @@
 {
-    team_name:"Kodiaks",
+    guys:{
+        team_name:"Kodiaks",
     $team_picture_type:'image',
     team_picture: "/assets/img/team.jpg",
 
@@ -14,4 +15,5 @@
         }
 
     ]
+    }
 }

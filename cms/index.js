@@ -29,6 +29,11 @@
 			$image_type: 'image',
 			image: '/assets/img/photo4.jpeg',
 			description: 'Lines'
+		},
+		{
+			$image_type: 'image',
+			image: '/remote/direct_uploads/1502675491_iup.png',
+			description: ''
 		}
 	],
 	Upcoming_Events: [
