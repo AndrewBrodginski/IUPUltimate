@@ -23,22 +23,22 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <a href="" class="mdl-layout-title mdl-navigation__link">{{global.application_name}}</a>
+      <a href="/" class="mdl-layout-title mdl-navigation__link">{{global.application_name}}</a>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
         <a class="mdl-navigation__link js-link" href="/guys_team">{{global.tab_names.tab2}}</a>
-        <a class="mdl-navigation__link js-link" link="{{> _the-girls}}">{{global.tab_names.tab3}}</a>
-        <a class="mdl-navigation__link js-link" link="{{> _join-page}}">{{global.tab_names.tab4}}</a>
+        <a class="mdl-navigation__link js-link" href="">{{global.tab_names.tab3}}</a>
+        <a class="mdl-navigation__link js-link" href="">{{global.tab_names.tab4}}</a>
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title mdl-navigation__link"><a href="" style="background-color:transparent;text-decoration:none; color:gray;">{{application_name}}</a></span>
+    <span class="mdl-layout-title mdl-navigation__link"><a href="/" style="background-color:transparent;text-decoration:none; color:gray;">{{global.application_name}}</a></span>
     <nav class="mdl-navigation">
-        <a class="mdl-navigation__link js-link" link="{{> _the-guys}}">{{global.tab_names.tab2}}</a>
-        <a class="mdl-navigation__link js-link" link="{{> _the-girls}}">{{global.tab_names.tab3}}</a>
-        <a class="mdl-navigation__link js-link" link="{{> _join-page}}">{{global.tab_names.tab4}}</a>
+        <a class="mdl-navigation__link js-link" href="/guys_team">{{global.tab_names.tab2}}</a>
+        <a class="mdl-navigation__link js-link" href="">{{global.tab_names.tab3}}</a>
+        <a class="mdl-navigation__link js-link" href="">{{global.tab_names.tab4}}</a>
     </nav>
   </div>
