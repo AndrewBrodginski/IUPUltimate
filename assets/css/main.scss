@@ -27,8 +27,18 @@ padding:10px;
     width:100%;
     min-height:400px;
     overflow-y:scroll;
+        padding: 35px 0px 16px 16px;
+    max-height:400px;
+}
+
+@-moz-document url-prefix() {
+    .twitter-card.mdl-card{
+    width:100%;
+    min-height:400px;
+    overflow-y:scroll;
         padding: 0px 0px 16px 16px;
     max-height:400px;
+}
 }
 
 .calendar-card.mdl-card{

@@ -15,27 +15,9 @@
 </head>
 
 <body>
-  <style>
-    .mdl-layout__header{
-	{{!-- background:url('{{slide_show.image4.image}}'); --}}
-  background-color:{{maincolor}}
-  
-}
-
-.mdl-navigation__link{
-  cursor:pointer;
 
 
-}
-
-
-.mdl-layout__tab-bar{
-	background-color:#424242;
-			
-}
-  </style>
-
- <script>
+ {{!-- <script>
   $(function(){
       console.log("hey");
       $('.js-link').click(function(){
@@ -44,35 +26,11 @@
 
 
   });
-</script>
+</script> --}}
 
-
-<!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <a href="" class="mdl-layout-title mdl-navigation__link">{{application_name}}</a>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link js-link" href="/guys_team">{{tab_names.tab2}}</a>
-        <a class="mdl-navigation__link js-link" link="{{> _the-girls}}">{{tab_names.tab3}}</a>
-        <a class="mdl-navigation__link js-link" link="{{> _join-page}}">{{tab_names.tab4}}</a>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title mdl-navigation__link"><a href="" style="background-color:transparent;text-decoration:none; color:gray;">{{application_name}}</a></span>
-    <nav class="mdl-navigation">
-        <a class="mdl-navigation__link js-link" link="{{> _the-guys}}">{{tab_names.tab2}}</a>
-        <a class="mdl-navigation__link js-link" link="{{> _the-girls}}">{{tab_names.tab3}}</a>
-        <a class="mdl-navigation__link js-link" link="{{> _join-page}}">{{tab_names.tab4}}</a>
-    </nav>
-  </div>
+    {{> _nav}}
       <main class="mdl-layout__content">
-        <div class="page-content">{{> _main}}</div>
+         <div class="page-content">{{> _main}}</div> 
       </main>
 </div> 
 </body>

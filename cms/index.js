@@ -1,14 +1,5 @@
 {
-	application_name: 'IUP Ultimate Frisbee',
-	main_title: 'Welcome to the IUP Ultimate Frisbee Page!',
-	tab_names: {
-		tab1: 'IUP Ultimate Frisbee',
-		tab2: 'The Guys',
-		tab3: 'The Girls',
-		tab4: 'Join Our Team'
-	},
-	maincolor: '#800000',
-	$maincolor_type: 'colorpicker',
+
 	slide_show: [
 		{
 			$image_type: 'image',
@@ -94,7 +85,7 @@
 			description: 'This website is the best for all things ultimate! You can sign up here to be able to participate in leagues, learn the rules, and stay up to date on all your favorite teams and official tournaments!'
 		},
 		{
-			title: 'Disc Store',
+			title: 'DISC STORE',
 			link: 'http://www.usaultimate.org/index.html',
 			$description_type: 'textarea',
 			description: 'Where you can find all the gear! Get anything from official weight ultimate discs, shirts, hats, gloves, and more!'
@@ -105,5 +96,20 @@
 			$description_type: 'textarea',
 			description: 'Another informational site to tell you exactly what Ultimate Frisbee is and how to play it!'
 		}
-	]
+	],
+	        team_name: "Kodiaks",
+        $team_picture_type: 'image',
+        team_picture: "/assets/img/team.jpg",
+
+        team: [{
+                Name: "Danny",
+                Major: "Management Information Services",
+                $image_type: 'image',
+                image: "/assets/img/danny.jpg",
+                bio: "",
+                years_played: ""
+            }
+
+        ]
+    
 }

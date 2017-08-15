@@ -2,16 +2,16 @@
   <div class="mdl-cell mdl-cell--8-col">
     <div class="main-card welcome-card mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">{{global.main_title}}</h2>
+        <h2 class="mdl-card__title-text">Welcome to the IUP Ultimate Frisbee Page!</h2>
       </div>
       <div class="mdl-card__supporting-text">
 
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <h5>Interested in joining?</h5> <button id="joinBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect js-link" link="{{> _join-page}}">Click Here!</button>
+        <h5>Interested in joining?</h5> <button id="joinBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect js-link" link="<h1>Join Page</h1>">Click Here!</button>
       </div>
       <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-link" link="{{> _join-page}}" />
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-link" link="<h1>Join Page</h1>" />
         <i class="material-icons">share</i>
         </button>
       </div>
@@ -25,16 +25,7 @@
       </div>
       <div class="mdl-card__actions mdl-card--border"></div>
       <div class="events">
-        {{#each Upcoming_Events as |event|}} {{#ifTeam event 'Guys'}}
-        <div class="event">
-          <div class="date">
-            <i class="fa fa-calendar" aria-hidden="true"></i> {{this.date}} @ {{this.time}}
-          </div>
-          <div class="event_info">
-            Tournament: {{this.title}} <br/> Description:{{event.description}} <br/> Team Playing: {{this.team}}<br/>
-          </div>
-        </div>
-        <hr/> {{/ifTeam}} {{/each}}
+        
       </div>
     </div>
   </div>
@@ -46,15 +37,6 @@
     </div>
     <div class="mdl-card__actions mdl-card--border"></div>
     <div class="links-container">
-      {{#each information_links as |link|}}
-        <div class="link-title">
-         <h4> <a href="{{link.link}}">{{link.title}}</a></h3>
-        </div>
-        <div class="link-desc">
-          <span>{{link.description}}</span>
-        </div>
-       
-      {{/each}}
     </div>
   </div>
 </div>
@@ -68,22 +50,12 @@
       <div class="mdl-card__actions mdl-card--border"></div>
 
       <div class="slideshow-container">
-        {{#each slide_show}}
-        <div class="mySlides fade">
-          <img src="{{image}}" style="width:100%">
-          <div class="text">{{description}}</div>
-        </div>
-        {{/each}}
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
       <br>
 
       <div style="text-align:center">
-        {{#each slide_show}}
-        <span class="dot" onclick="currentSlide{{@key}}"></span>
-
-        {{/each}}
       </div>
 
     </div>
