@@ -19,38 +19,20 @@
 
 
     
-      <style>
-        .mdl-layout__header{
-      background-color:#800000
-      
-    }
-    
-    .mdl-navigation__link{
-      cursor:pointer;
-    
-    
-    }
-    
-    
-    .mdl-layout__tab-bar{
-    	background-color:#424242;
-    			
-    }
-      </style>
     
     <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
+      <header class="mdl-layout__header" style="background-color:#800000">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <a href="/" class="mdl-layout-title mdl-navigation__link">IUP Ultimate Frisbee</a>
+          <a id="main-title" href="/" class="mdl-layout-title mdl-navigation__link">IUP Ultimate Frisbee</a>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation. We hide it in small screens. -->
           <nav class="mdl-navigation mdl-layout--large-screen-only">
             <a class="mdl-navigation__link js-link" href="/guys_team">The Guys</a>
-            <a class="mdl-navigation__link js-link" link="">The Girls</a>
-            <a class="mdl-navigation__link js-link" link="">Join Our Team</a>
+            <a class="mdl-navigation__link js-link" href="">The Girls</a>
+            <a class="mdl-navigation__link js-link" href="">Join Our Team</a>
           </nav>
         </div>
       </header>
@@ -58,8 +40,8 @@
         <span class="mdl-layout-title mdl-navigation__link"><a href="/" style="background-color:transparent;text-decoration:none; color:gray;">IUP Ultimate Frisbee</a></span>
         <nav class="mdl-navigation">
             <a class="mdl-navigation__link js-link" href="/guys_team">The Guys</a>
-            <a class="mdl-navigation__link js-link" link="">The Girls</a>
-            <a class="mdl-navigation__link js-link" link="">Join Our Team</a>
+            <a class="mdl-navigation__link js-link" href="">The Girls</a>
+            <a class="mdl-navigation__link js-link" href="">Join Our Team</a>
         </nav>
       </div>
       <main class="mdl-layout__content">

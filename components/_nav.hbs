@@ -1,29 +1,17 @@
 
-  <style>
+  {{!-- <style>
     .mdl-layout__header{
   background-color:{{global.maincolor}}
   
 }
-
-.mdl-navigation__link{
-  cursor:pointer;
-
-
-}
-
-
-.mdl-layout__tab-bar{
-	background-color:#424242;
-			
-}
-  </style>
+  </style> --}}
 
 <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
+  <header class="mdl-layout__header" style="background-color:{{global.maincolor}}">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <a href="/" class="mdl-layout-title mdl-navigation__link">{{global.application_name}}</a>
+      <a id="main-title" href="/" class="mdl-layout-title mdl-navigation__link">{{global.application_name}}</a>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->

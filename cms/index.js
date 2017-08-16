@@ -1,5 +1,10 @@
 {
-
+	team_picture:{
+		image: '/assets/img/team.jpg',
+		$image_type: 'image',
+		title:'IUP Ultimate at High Tide 2017',
+		description:''
+	},
 	slide_show: [
 		{
 			$image_type: 'image',
@@ -96,20 +101,5 @@
 			$description_type: 'textarea',
 			description: 'Another informational site to tell you exactly what Ultimate Frisbee is and how to play it!'
 		}
-	],
-	        team_name: "Kodiaks",
-        $team_picture_type: 'image',
-        team_picture: "/assets/img/team.jpg",
-
-        team: [{
-                Name: "Danny",
-                Major: "Management Information Services",
-                $image_type: 'image',
-                image: "/assets/img/danny.jpg",
-                bio: "",
-                years_played: ""
-            }
-
-        ]
-    
+	]
 }

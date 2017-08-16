@@ -15,42 +15,21 @@
 </head>
 
 <body>
-
-
-
     
-      <style>
-        .mdl-layout__header{
-      background-color:#800000
-      
-    }
-    
-    .mdl-navigation__link{
-      cursor:pointer;
-    
-    
-    }
-    
-    
-    .mdl-layout__tab-bar{
-    	background-color:#424242;
-    			
-    }
-      </style>
     
     <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
+      <header class="mdl-layout__header" style="background-color:#800000">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <a href="/" class="mdl-layout-title mdl-navigation__link">IUP Ultimate Frisbee</a>
+          <a id="main-title" href="/" class="mdl-layout-title mdl-navigation__link">IUP Ultimate Frisbee</a>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation. We hide it in small screens. -->
           <nav class="mdl-navigation mdl-layout--large-screen-only">
             <a class="mdl-navigation__link js-link" href="/guys_team">The Guys</a>
-            <a class="mdl-navigation__link js-link" link="">The Girls</a>
-            <a class="mdl-navigation__link js-link" link="">Join Our Team</a>
+            <a class="mdl-navigation__link js-link" href="">The Girls</a>
+            <a class="mdl-navigation__link js-link" href="">Join Our Team</a>
           </nav>
         </div>
       </header>
@@ -58,27 +37,27 @@
         <span class="mdl-layout-title mdl-navigation__link"><a href="/" style="background-color:transparent;text-decoration:none; color:gray;">IUP Ultimate Frisbee</a></span>
         <nav class="mdl-navigation">
             <a class="mdl-navigation__link js-link" href="/guys_team">The Guys</a>
-            <a class="mdl-navigation__link js-link" link="">The Girls</a>
-            <a class="mdl-navigation__link js-link" link="">Join Our Team</a>
+            <a class="mdl-navigation__link js-link" href="">The Girls</a>
+            <a class="mdl-navigation__link js-link" href="">Join Our Team</a>
         </nav>
       </div>
       <main class="mdl-layout__content">
          <div class="page-content"><div class="mdl-grid">
   <div class="mdl-cell mdl-cell--8-col">
-    <div class="main-card welcome-card mdl-card mdl-shadow--2dp">
+    <div class="main-card mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">Welcome to the IUP Ultimate Frisbee Page!</h2>
+        <h2 id="main-card-title" class="mdl-card__title-text">Welcome to the IUP Ultimate Frisbee Page!</h2>
       </div>
       <div class="mdl-card__supporting-text">
 
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <h5>Interested in joining?</h5> <button id="joinBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect js-link" link="<h1>Join Page</h1>">Click Here!</button>
+        <h4 class="mdl-typography--text-center">IUP Ultimate at High Tide 2017</h4>
+        <img src="/assets/img/team.jpg" style="width:100%;">
+        <h4></h4>
       </div>
       <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-link" link="<h1>Join Page</h1>" />
-        <i class="material-icons">share</i>
-        </button>
+<a id="joinBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" href="<h1>Join Page</h1>">Click Here to Join!</a>
       </div>
     </div>
   </div>
@@ -93,28 +72,34 @@
          
         <div class="event">
           <div class="date">
-            <i class="fa fa-calendar" aria-hidden="true"></i> Wednesday, 05 July, 2017 @ 12:30 AM
+            <i class="fa fa-calendar" aria-hidden="true"></i> Wednesday, 05 July, 2017 <br/> @ 12:30 AM
           </div>
           <div class="event_info">
-            Tournament: Suh Dude Tourney <br/> Description:RECYCLE THE STACK! <br/> Team Playing: Guys<br/>
+            Tournament: Suh Dude Tourney <br/> 
+            Description:RECYCLE THE STACK! <br/> 
+            Team Playing: Guys<br/>
           </div>
         </div>
         <hr/>   
         <div class="event">
           <div class="date">
-            <i class="fa fa-calendar" aria-hidden="true"></i> Thursday, 01 February, 2018 @ 3:30 PM
+            <i class="fa fa-calendar" aria-hidden="true"></i> Thursday, 01 February, 2018 <br/> @ 3:30 PM
           </div>
           <div class="event_info">
-            Tournament: Test Tourney <br/> Description:Testing <br/> Team Playing: Guys<br/>
+            Tournament: Test Tourney <br/> 
+            Description:Testing <br/> 
+            Team Playing: Guys<br/>
           </div>
         </div>
         <hr/>   
         <div class="event">
           <div class="date">
-            <i class="fa fa-calendar" aria-hidden="true"></i> Monday, 11 September, 2017 @ 10:00 PM
+            <i class="fa fa-calendar" aria-hidden="true"></i> Monday, 11 September, 2017 <br/> @ 10:00 PM
           </div>
           <div class="event_info">
-            Tournament: Fighting Squirrels Tournament <br/> Description:Begin <br/> Team Playing: Guys<br/>
+            Tournament: Fighting Squirrels Tournament <br/> 
+            Description:Begin <br/> 
+            Team Playing: Guys<br/>
           </div>
         </div>
         <hr/>    
@@ -122,7 +107,7 @@
     </div>
   </div>
 
-<div class="mdl-cell mdl-cell--6-col">
+<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
   <div class="main-card mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title">
       <h2 class="mdl-card__title-text">Wanna Learn?</h2>
@@ -154,7 +139,7 @@
   </div>
 </div>
 
-  <div class="mdl-cell mdl-cell--6-col">
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
     <div id="slideshow-card" class="main-card mdl-card mdl-shadow--2dp">
 
       <div class="mdl-card__title">
@@ -164,23 +149,23 @@
 
       <div class="slideshow-container">
         <div class="mySlides fade">
-          <img src="/assets/img/photo1.jpeg" style="width:100%">
+          <img src="/assets/img/photo1.jpeg">
           <div class="text">Cool Field</div>
         </div>
         <div class="mySlides fade">
-          <img src="/assets/img/photo2.jpeg" style="width:100%">
+          <img src="/assets/img/photo2.jpeg">
           <div class="text">Some Players</div>
         </div>
         <div class="mySlides fade">
-          <img src="/assets/img/photo3.jpeg" style="width:100%">
+          <img src="/assets/img/photo3.jpeg">
           <div class="text">Running From My Problems</div>
         </div>
         <div class="mySlides fade">
-          <img src="/assets/img/photo4.jpeg" style="width:100%">
+          <img src="/assets/img/photo4.jpeg">
           <div class="text">Lines</div>
         </div>
         <div class="mySlides fade">
-          <img src="/remote/direct_uploads/1502675491_iup.png" style="width:100%">
+          <img src="/remote/direct_uploads/1502675491_iup.png">
           <div class="text"></div>
         </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -227,7 +212,7 @@ function showSlides() {
 }
 </script></div> 
       </main>
-</div> 
+
 </body>
 <footer>
 

@@ -1,19 +1,19 @@
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--8-col">
-    <div class="main-card welcome-card mdl-card mdl-shadow--2dp">
+    <div class="main-card mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">{{global.main_title}}</h2>
+        <h2 id="main-card-title" class="mdl-card__title-text">{{global.main_title}}</h2>
       </div>
       <div class="mdl-card__supporting-text">
 
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <h5>Interested in joining?</h5> <button id="joinBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect js-link" link="{{> _join-page}}">Click Here!</button>
+        <h4 class="mdl-typography--text-center">{{team_picture.title}}</h4>
+        <img src="{{team_picture.image}}" style="width:100%;">
+        <h4>{{team_picture.description}}</h4>
       </div>
       <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-link" link="{{> _join-page}}" />
-        <i class="material-icons">share</i>
-        </button>
+<a id="joinBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" href="{{> _join-page}}">Click Here to Join!</a>
       </div>
     </div>
   </div>
@@ -28,10 +28,12 @@
         {{#each Upcoming_Events as |event|}} {{#ifTeam event 'Guys'}}
         <div class="event">
           <div class="date">
-            <i class="fa fa-calendar" aria-hidden="true"></i> {{this.date}} @ {{this.time}}
+            <i class="fa fa-calendar" aria-hidden="true"></i> {{this.date}} <br/> @ {{this.time}}
           </div>
           <div class="event_info">
-            Tournament: {{this.title}} <br/> Description:{{event.description}} <br/> Team Playing: {{this.team}}<br/>
+            Tournament: {{this.title}} <br/> 
+            Description:{{event.description}} <br/> 
+            Team Playing: {{this.team}}<br/>
           </div>
         </div>
         <hr/> {{/ifTeam}} {{/each}}
@@ -39,7 +41,7 @@
     </div>
   </div>
 
-<div class="mdl-cell mdl-cell--6-col">
+<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
   <div class="main-card mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title">
       <h2 class="mdl-card__title-text">Wanna Learn?</h2>
@@ -59,7 +61,7 @@
   </div>
 </div>
 
-  <div class="mdl-cell mdl-cell--6-col">
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
     <div id="slideshow-card" class="main-card mdl-card mdl-shadow--2dp">
 
       <div class="mdl-card__title">
@@ -70,7 +72,7 @@
       <div class="slideshow-container">
         {{#each slide_show}}
         <div class="mySlides fade">
-          <img src="{{image}}" style="width:100%">
+          <img src="{{image}}">
           <div class="text">{{description}}</div>
         </div>
         {{/each}}
