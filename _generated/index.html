@@ -108,7 +108,7 @@
   </div>
 
 <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-  <div class="main-card mdl-card mdl-shadow--2dp">
+  <div class="links-card mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title">
       <h2 class="mdl-card__title-text">Wanna Learn?</h2>
     </div>
@@ -140,7 +140,7 @@
 </div>
 
   <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-    <div id="slideshow-card" class="main-card mdl-card mdl-shadow--2dp">
+    <div class="slideshow-card mdl-card mdl-shadow--2dp">
 
       <div class="mdl-card__title">
         <h2 class="mdl-card__title-text">Team Slideshow</h2>
@@ -148,25 +148,21 @@
       <div class="mdl-card__actions mdl-card--border"></div>
 
       <div class="slideshow-container">
-        <div class="mySlides fade">
+        <div class="mySlides ">
           <img src="/assets/img/photo1.jpeg">
           <div class="text">Cool Field</div>
         </div>
-        <div class="mySlides fade">
+        <div class="mySlides ">
           <img src="/assets/img/photo2.jpeg">
           <div class="text">Some Players</div>
         </div>
-        <div class="mySlides fade">
+        <div class="mySlides ">
           <img src="/assets/img/photo3.jpeg">
           <div class="text">Running From My Problems</div>
         </div>
-        <div class="mySlides fade">
+        <div class="mySlides ">
           <img src="/assets/img/photo4.jpeg">
           <div class="text">Lines</div>
-        </div>
-        <div class="mySlides fade">
-          <img src="/remote/direct_uploads/1502675491_iup.png">
-          <div class="text"></div>
         </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -182,35 +178,13 @@
 
         <span class="dot" onclick="currentSlide3"></span>
 
-        <span class="dot" onclick="currentSlide4"></span>
-
       </div>
 
     </div>
   </div>
 </div>
 </div>
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 4000); // Change image every 2 seconds
-}
-</script></div> 
+<script type="text/javascript" src="/assets/js/slideShow.js"></script></div> 
       </main>
 
 </body>

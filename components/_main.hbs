@@ -42,7 +42,7 @@
   </div>
 
 <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-  <div class="main-card mdl-card mdl-shadow--2dp">
+  <div class="links-card mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title">
       <h2 class="mdl-card__title-text">Wanna Learn?</h2>
     </div>
@@ -62,7 +62,7 @@
 </div>
 
   <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
-    <div id="slideshow-card" class="main-card mdl-card mdl-shadow--2dp">
+    <div class="slideshow-card mdl-card mdl-shadow--2dp">
 
       <div class="mdl-card__title">
         <h2 class="mdl-card__title-text">Team Slideshow</h2>
@@ -71,7 +71,7 @@
 
       <div class="slideshow-container">
         {{#each slide_show}}
-        <div class="mySlides fade">
+        <div class="mySlides ">
           <img src="{{image}}">
           <div class="text">{{description}}</div>
         </div>
@@ -92,24 +92,4 @@
   </div>
 </div>
 </div>
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 4000); // Change image every 2 seconds
-}
-</script>
+<script type="text/javascript" src="/assets/js/slideShow.js"></script>

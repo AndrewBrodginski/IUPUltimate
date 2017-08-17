@@ -39,19 +39,34 @@ padding:10px;
 
 .twitter-card.mdl-card{
     width:100%;
-    min-height:400px;
+
     overflow-y:scroll;
         padding: 35px 0px 16px 16px;
-    max-height:400px;
+    max-height:650px;
 }
+
+.links-card.mdl-card{
+     width: 100%;
+padding:10px;
+max-height:650px;
+overflow-y:scroll;
+}
+
+.slideshow-card.mdl-card{
+         width: 100%;
+padding:10px;
+max-height:650px;
+min-height:650px;
+}
+
 
 @-moz-document url-prefix() {
     .twitter-card.mdl-card{
     width:100%;
-    min-height:400px;
+
     overflow-y:scroll;
         padding: 0px 0px 16px 16px;
-    max-height:400px;
+    max-height:650px;
 }
 }
 
@@ -187,7 +202,7 @@ padding:10px;
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 3s;
   animation-name: fade;
   animation-duration: 1.5s;
 }
@@ -201,4 +216,5 @@ padding:10px;
   from {opacity: .4}
   to {opacity: 1}
 }
+
 
