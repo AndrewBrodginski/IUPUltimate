@@ -1,0 +1,7 @@
+define(["handlebars"], function(Handlebars) { return Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<footer class=\"mdl-mini-footer\">\r\n  <div class=\"mdl-mini-footer__left-section\">\r\n    <div class=\"mdl-logo\">"
+    + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.global : depth0)) != null ? stack1.application_name : stack1), depth0))
+    + "</div>\r\n    <ul class=\"mdl-mini-footer__link-list\">\r\n      <li><a href=\"guys_team\">Guys Team</a></li>\r\n      <li><a href=\"#\">Girls Team</a></li>\r\n      <li><a href=\"#\">Join Team</a></li>\r\n      <li><a href=\"#\">About</a></li>\r\n      <li><a href=\"#\">Privacy & Terms</a></li>\r\n    </ul>\r\n  </div>\r\n\r\n   <div class=\"mdl-mini-footer__right-section\">\r\n      <a href=\"http://www.endurojs.com/\" target=\"_blank\"><img src=\"https://s3-eu-west-1.amazonaws.com/enduro.website/direct_uploads/1484647615_made_with_enduro.png\" srcset=\"https://s3-eu-west-1.amazonaws.com/enduro.website/direct_uploads/1484647615_made_with_enduro.png 1x, https://s3-eu-west-1.amazonaws.com/enduro.website/direct_uploads/1484647617_made_with_enduro@2x.png 2x\"></a>\r\n   </div>\r\n</footer>";
+},"useData":true}); });

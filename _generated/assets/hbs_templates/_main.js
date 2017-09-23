@@ -63,5 +63,7 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"1":fu
     + ((stack1 = helpers.each.call(alias3,(depth0 != null ? depth0.slide_show : depth0),{"name":"each","hash":{},"fn":container.program(6, data, 0, blockParams),"inverse":container.noop,"data":data,"blockParams":blockParams})) != null ? stack1 : "")
     + "        <a class=\"prev\" onclick=\"plusSlides(-1)\">&#10094;</a>\r\n        <a class=\"next\" onclick=\"plusSlides(1)\">&#10095;</a>\r\n      </div>\r\n      <br>\r\n\r\n      <div style=\"text-align:center\">\r\n"
     + ((stack1 = helpers.each.call(alias3,(depth0 != null ? depth0.slide_show : depth0),{"name":"each","hash":{},"fn":container.program(8, data, 0, blockParams),"inverse":container.noop,"data":data,"blockParams":blockParams})) != null ? stack1 : "")
-    + "      </div>\r\n\r\n    </div>\r\n  </div>\r\n</div>\r\n</div>\r\n<script type=\"text/javascript\" src=\"/assets/js/slideShow.js\"></script>";
+    + "      </div>\r\n\r\n    </div>\r\n  </div>\r\n</div>\r\n</div>\r\n"
+    + ((stack1 = container.invokePartial(partials._footer,depth0,{"name":"_footer","data":data,"blockParams":blockParams,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
+    + "<script type=\"text/javascript\" src=\"/assets/js/slideShow.js\"></script>";
 },"usePartial":true,"useData":true,"useBlockParams":true}); });

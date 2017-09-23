@@ -19,6 +19,12 @@ nav > .mdl-navigation__link:hover{
     #main-title{
         font-size:18px;
     }
+    .mySlides img{
+        
+            width:100%;
+            max-height:200px;
+            min-height:200px;
+        }
     
 }
 
@@ -56,7 +62,7 @@ overflow-y:scroll;
          width: 100%;
 padding:10px;
 max-height:650px;
-min-height:650px;
+min-height:300px;
 }
 
 
@@ -135,6 +141,7 @@ min-height:650px;
 .mySlides img{
 
     width:100%;
+    max-height:400px;
 }
 
 /* Next & previous buttons */
@@ -216,5 +223,26 @@ min-height:650px;
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/* Footer */
+footer{
+    background-color:#424242;
+    color:white;
+    left:0px;
+    bottom:0px;
+    height:100px;
+    width:100%;
+}
+
+.footer-links{
+
+}
+
+.enduro-badge{
+    position:absolute;
+    top:50%;
+    float:right;
+}
+
 
 
