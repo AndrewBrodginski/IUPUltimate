@@ -5,7 +5,7 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"compi
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.global : depth0)) != null ? stack1.maincolor : stack1), depth0))
     + "\">\r\n    <div class=\"mdl-layout__header-row\">\r\n      <!-- Title -->\r\n      <a id=\"main-title\" href=\"/\" class=\"mdl-layout-title mdl-navigation__link\">"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.global : depth0)) != null ? stack1.application_name : stack1), depth0))
-    + "</a>\r\n      <!-- Add spacer, to align navigation to the right -->\r\n      <div class=\"mdl-layout-spacer\"></div>\r\n      <!-- Navigation. We hide it in small screens. -->\r\n      <nav class=\"mdl-navigation mdl-layout--large-screen-only\">\r\n        <a class=\"mdl-navigation__link js-link\" href=\"/guys\">"
+    + "</a>\r\n      <!-- Add spacer, to align navigation to the right -->\r\n      <div class=\"mdl-layout-spacer\"></div>\r\n      <!-- Navigation. We hide it in small screens. -->\r\n      <nav class=\"mdl-navigation mdl-layout--large-screen-only\">\r\n        <a class=\"mdl-navigation__link js-link\" href=\"/guys_team\">"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.global : depth0)) != null ? stack1.tab_names : stack1)) != null ? stack1.tab2 : stack1), depth0))
     + "</a>\r\n        <a class=\"mdl-navigation__link js-link\" href=\"/girls_team\">"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.global : depth0)) != null ? stack1.tab_names : stack1)) != null ? stack1.tab3 : stack1), depth0))
@@ -13,7 +13,7 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"compi
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.global : depth0)) != null ? stack1.tab_names : stack1)) != null ? stack1.tab4 : stack1), depth0))
     + "</a>\r\n      </nav>\r\n    </div>\r\n  </header>\r\n  <div class=\"mdl-layout__drawer\">\r\n    <span class=\"mdl-layout-title mdl-navigation__link\"><a href=\"/\" style=\"background-color:transparent;text-decoration:none; color:gray;\">"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.global : depth0)) != null ? stack1.application_name : stack1), depth0))
-    + "</a></span>\r\n    <nav class=\"mdl-navigation\">\r\n        <a class=\"mdl-navigation__link js-link\" href=\"/guys\">"
+    + "</a></span>\r\n    <nav class=\"mdl-navigation\">\r\n        <a class=\"mdl-navigation__link js-link\" href=\"/guys_team\">"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.global : depth0)) != null ? stack1.tab_names : stack1)) != null ? stack1.tab2 : stack1), depth0))
     + "</a>\r\n        <a class=\"mdl-navigation__link js-link\" href=\"/girls_team\">"
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.global : depth0)) != null ? stack1.tab_names : stack1)) != null ? stack1.tab3 : stack1), depth0))
