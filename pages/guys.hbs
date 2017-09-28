@@ -2,31 +2,108 @@
 <html>
 
 <head>
-	<title>IUP - Ultimate Frisbee and Fun</title>
+  <title>IUP - Ultimate Frisbee and Fun</title>
   <meta http-equiv="Pragma" content="no-cache">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="/assets/css/main.css">
-	<style type="text/css"></style>
-	<script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="\assets\vendor\material-design-lite\material.min.css">
-<script src="/assets/vendor/material-design-lite/material.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<script src="https://use.fontawesome.com/d0e47f0c64.js"></script>
-<link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style type="text/css"></style>
+  <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="\assets\vendor\material-design-lite\material.min.css">
+  <script src="/assets/vendor/material-design-lite/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://use.fontawesome.com/d0e47f0c64.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 
+<style>
+  .team-card-wide.mdl-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .team-card-wide>.mdl-card__title {
+    color: #fff;
+    height: 300px;
+    background: url('{{team_picture.image}}') center / cover;
+  }
+
+  .team-card-wide>.mdl-card__menu {
+    color: #fff;
+  }
+
+  .demo-card-square.mdl-card {
+    width: 320px;
+    height: 320px;
+  }
+
+  .demo-card-square>.mdl-card__title {
+    color: #fff;
+    background: url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+  }
+</style>
+
 <body>
-    {{> _nav}}
-      <main class="mdl-layout__content">
-         <div class="page-content">
-             <div>
-                 <h2>Guys Team</h2>
-             </div>
-        </div> 
-      </main>
-		{{> _footer}}
+  {{> _nav}}
+  <main class="mdl-layout__content">
+    <div class="page-content">
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--8-col">
+          <div class="team-card-wide mdl-card mdl-shadow--2dp animated fadeInUp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">{{team_name}}</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              {{team_picture.description}}
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="/join" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+     Join the Team!
+    </a>
+            </div>
+          </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+          <div class="calendar-card mdl-card mdl-shadow--2dp animated fadeInUp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Calendar Events</h2>
+            </div>
+            <div class="mdl-card__actions mdl-card--border"></div>
+            <div class="events">
+              {{#each global.Upcoming_Events as |event|}} {{#ifTeam event 'Guys'}}
+              <div class="event">
+                <div class="date">
+                  <i class="fa fa-calendar" aria-hidden="true"></i> {{this.date}} <br/> @ {{this.time}}
+                </div>
+                <div class="event_info">
+                  Tournament: {{this.title}} <br/> Description:{{event.description}} <br/> Team Playing: {{this.team}}<br/>
+                </div>
+              </div>
+              <hr/> {{/ifTeam}} {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mdl-grid">
+                  {{#each team as |player| }}
+          <div class="mdl-cell mdl-cell--3-col animated fadeInUp">
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand">
+              <h2 class="mdl-card__title-text">{{this.name}}</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              
+              <strong>Major: </strong><span>{{this.major}}</span><br><br>
+              {{this.description}}
+            </div>
+          </div>
+          </div>
+          {{/each}}
+      </div>
+    </div>
+  </main>
+  {{> _footer}}
 </body>
 
 </html>
