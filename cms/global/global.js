@@ -1,5 +1,5 @@
 {
-		application_name: 'IUP Ultimate Frisbee',
+	application_name: 'IUP Ultimate Frisbee',
 	main_title: 'Welcome to the IUP Ultimate Frisbee Page!',
 	tab_names: {
 		tab1: 'IUP Ultimate Frisbee',
@@ -9,7 +9,6 @@
 	},
 	maincolor: '#800000',
 	$maincolor_type: 'colorpicker',
-
 	Upcoming_Events: [
 		{
 			title: 'Suh Dude Tourney',
@@ -46,6 +45,54 @@
 			time: '10:00 PM',
 			$date_value: '2017-09-11',
 			$time_value: '22:00:00'
+		},
+		{
+			title: 'Girls Test',
+			$description_type: 'textarea',
+			description: 'Girls Tourney',
+			team: 'Girls',
+			$date_type: 'date',
+			date: 'Sunday, 13 August, 2017',
+			$time_type: 'time',
+			time: '12:30 AM',
+			$date_value: '2017-08-13',
+			$time_value: '00:30:00'
+		},
+		{
+			title: 'Girls Test',
+			$description_type: 'textarea',
+			description: 'Girls Tourney',
+			team: 'Girls',
+			$date_type: 'date',
+			date: 'Sunday, 13 August, 2017',
+			$time_type: 'time',
+			time: '12:30 AM',
+			$date_value: '2017-08-13',
+			$time_value: '00:30:00'
+		},
+		{
+			title: 'Girls Test',
+			$description_type: 'textarea',
+			description: 'Girls Tourney',
+			team: 'Girls',
+			$date_type: 'date',
+			date: 'Sunday, 13 August, 2017',
+			$time_type: 'time',
+			time: '12:30 AM',
+			$date_value: '2017-08-13',
+			$time_value: '00:30:00'
+		},
+		{
+			title: 'Girls Test',
+			$description_type: 'textarea',
+			description: 'Girls Tourney',
+			team: 'Girls',
+			$date_type: 'date',
+			date: 'Sunday, 13 August, 2017',
+			$time_type: 'time',
+			time: '12:30 AM',
+			$date_value: '2017-08-13',
+			$time_value: '00:30:00'
 		},
 		{
 			title: 'Girls Test',

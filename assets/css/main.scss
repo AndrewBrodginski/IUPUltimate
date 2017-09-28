@@ -25,7 +25,9 @@ nav > .mdl-navigation__link:hover{
             max-height:200px;
             min-height:200px;
         }
-    
+        .demo-card-square.mdl-card {
+            width:100%;
+          }
 }
 
 @media screen and (max-width: 900px){

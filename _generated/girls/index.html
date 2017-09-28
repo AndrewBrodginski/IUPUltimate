@@ -2,70 +2,255 @@
 <html>
 
 <head>
-	<title>IUP - Ultimate Frisbee and Fun</title>
+  <title>IUP - Ultimate Frisbee and Fun</title>
   <meta http-equiv="Pragma" content="no-cache">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="/assets/css/main.css">
-	<style type="text/css"></style>
-	<script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="\assets\vendor\material-design-lite\material.min.css">
-<script src="/assets/vendor/material-design-lite/material.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<script src="https://use.fontawesome.com/d0e47f0c64.js"></script>
-<link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style type="text/css"></style>
+  <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="\assets\vendor\material-design-lite\material.min.css">
+  <script src="/assets/vendor/material-design-lite/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://use.fontawesome.com/d0e47f0c64.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 
+<style>
+  .team-card-wide.mdl-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .team-card-wide>.mdl-card__title {
+    color: #fff;
+    height: 300px;
+    background: url('/assets/img/team.jpg') center / cover;
+  }
+
+  .team-card-wide>.mdl-card__menu {
+    color: #fff;
+  }
+
+  .demo-card-square.mdl-card {
+    
+  width: 100%;
+min-width: 215px;
+min-height: 280px;
+  }
+
+  .demo-card-square>.mdl-card__title {
+    color: #fff;
+    background: url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+  }
+</style>
+
 <body>
-    
-    
-    <!-- Always shows a header, even in smaller screens. -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header" style="background-color:#800000">
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-          <a id="main-title" href="/" class="mdl-layout-title mdl-navigation__link">IUP Ultimate Frisbee</a>
-          <!-- Add spacer, to align navigation to the right -->
-          <div class="mdl-layout-spacer"></div>
-          <!-- Navigation. We hide it in small screens. -->
-          <nav class="mdl-navigation mdl-layout--large-screen-only">
-            <a class="mdl-navigation__link js-link" href="/guys">The Guys</a>
-            <a class="mdl-navigation__link js-link" href="/girls">The Girls</a>
-            <a class="mdl-navigation__link js-link" href="/join">Join Our Team</a>
-          </nav>
-        </div>
-      </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title mdl-navigation__link"><a href="/" style="background-color:transparent;text-decoration:none; color:gray;">IUP Ultimate Frisbee</a></span>
-        <nav class="mdl-navigation">
-            <a class="mdl-navigation__link js-link" href="/guys">The Guys</a>
-            <a class="mdl-navigation__link js-link" href="/girls">The Girls</a>
-            <a class="mdl-navigation__link js-link" href="/join">Join Our Team</a>
+  
+  
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header" style="background-color:#800000">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <a id="main-title" href="/" class="mdl-layout-title mdl-navigation__link">IUP Ultimate Frisbee</a>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link js-link" href="/guys">The Guys</a>
+          <a class="mdl-navigation__link js-link" href="/girls">The Girls</a>
+          <a class="mdl-navigation__link js-link" href="/join">Join Our Team</a>
         </nav>
       </div>
-      <main class="mdl-layout__content">
-         <div class="page-content">
-             <div>
-                 <h2>Girls Team</h2>
-             </div>
-        </div> 
-      </main>
-		<footer class="mdl-mini-footer">
-		  <div class="mdl-mini-footer__left-section">
-		    <div class="mdl-logo">IUP Ultimate Frisbee</div>
-		    <ul class="mdl-mini-footer__link-list">
-		      <li><a href="/guys">Guys Team</a></li>
-		      <li><a href="/girls">Girls Team</a></li>
-		      <li><a href="/join">Join Team</a></li>
-		      <li><a href="#">About</a></li>
-		      <li><a href="#">Privacy & Terms</a></li>
-		    </ul>
-		  </div>
-		
-		   <div class="mdl-mini-footer__right-section">
-		      <a href="http://www.endurojs.com/" target="_blank"><img src="https://s3-eu-west-1.amazonaws.com/enduro.website/direct_uploads/1484647615_made_with_enduro.png" srcset="https://s3-eu-west-1.amazonaws.com/enduro.website/direct_uploads/1484647615_made_with_enduro.png 1x, https://s3-eu-west-1.amazonaws.com/enduro.website/direct_uploads/1484647617_made_with_enduro@2x.png 2x"></a>
-		   </div>
-		</footer></body>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title mdl-navigation__link"><a href="/" style="background-color:transparent;text-decoration:none; color:gray;">IUP Ultimate Frisbee</a></span>
+      <nav class="mdl-navigation">
+          <a class="mdl-navigation__link js-link" href="/guys">The Guys</a>
+          <a class="mdl-navigation__link js-link" href="/girls">The Girls</a>
+          <a class="mdl-navigation__link js-link" href="/join">Join Our Team</a>
+      </nav>
+    </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--8-col">
+          <div class="team-card-wide mdl-card mdl-shadow--2dp animated fadeInUp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Irukandji</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Write whatever you want here!
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="/join" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+     Join the Team!
+    </a>
+            </div>
+          </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+          <div class="calendar-card mdl-card mdl-shadow--2dp animated fadeInUp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Calendar Events</h2>
+            </div>
+            <div class="mdl-card__actions mdl-card--border"></div>
+            <div class="events">
+                     
+              <div class="event">
+                <div class="date">
+                  <i class="fa fa-calendar" aria-hidden="true"></i> Sunday, 13 August, 2017 <br/> @ 12:30 AM
+                </div>
+                <div class="event_info">
+                  Tournament: Girls Test <br/> Description:Girls Tourney <br/> Team Playing: Girls<br/>
+                </div>
+              </div>
+              <hr/>   
+              <div class="event">
+                <div class="date">
+                  <i class="fa fa-calendar" aria-hidden="true"></i> Sunday, 13 August, 2017 <br/> @ 12:30 AM
+                </div>
+                <div class="event_info">
+                  Tournament: Girls Test <br/> Description:Girls Tourney <br/> Team Playing: Girls<br/>
+                </div>
+              </div>
+              <hr/>   
+              <div class="event">
+                <div class="date">
+                  <i class="fa fa-calendar" aria-hidden="true"></i> Sunday, 13 August, 2017 <br/> @ 12:30 AM
+                </div>
+                <div class="event_info">
+                  Tournament: Girls Test <br/> Description:Girls Tourney <br/> Team Playing: Girls<br/>
+                </div>
+              </div>
+              <hr/>   
+              <div class="event">
+                <div class="date">
+                  <i class="fa fa-calendar" aria-hidden="true"></i> Sunday, 13 August, 2017 <br/> @ 12:30 AM
+                </div>
+                <div class="event_info">
+                  Tournament: Girls Test <br/> Description:Girls Tourney <br/> Team Playing: Girls<br/>
+                </div>
+              </div>
+              <hr/>   
+              <div class="event">
+                <div class="date">
+                  <i class="fa fa-calendar" aria-hidden="true"></i> Sunday, 13 August, 2017 <br/> @ 12:30 AM
+                </div>
+                <div class="event_info">
+                  Tournament: Girls Test <br/> Description:Girls Tourney <br/> Team Playing: Girls<br/>
+                </div>
+              </div>
+              <hr/>  
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--6--col-tablet mdl-cell--12-col-phone animated fadeInUp">
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand">
+              <h2 class="mdl-card__title-text">Danielle Siebert</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              
+              <strong>Major: </strong><span>Math</span><br><br>
+              Put a quote here or a small description!
+            </div>
+          </div>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--6--col-tablet mdl-cell--12-col-phone animated fadeInUp">
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand">
+              <h2 class="mdl-card__title-text">Jessica Gates</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              
+              <strong>Major: </strong><span>Bio?</span><br><br>
+              Put a quote here or a small description!
+            </div>
+          </div>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--6--col-tablet mdl-cell--12-col-phone animated fadeInUp">
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand">
+              <h2 class="mdl-card__title-text">Jane Doe</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              
+              <strong>Major: </strong><span>Psych</span><br><br>
+              Put a quote here or a small description!
+            </div>
+          </div>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--6--col-tablet mdl-cell--12-col-phone animated fadeInUp">
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand">
+              <h2 class="mdl-card__title-text">Jane Doe</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              
+              <strong>Major: </strong><span>Psych</span><br><br>
+              Put a quote here or a small description!
+            </div>
+          </div>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--6--col-tablet mdl-cell--12-col-phone animated fadeInUp">
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand">
+              <h2 class="mdl-card__title-text">Jane Doe</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              
+              <strong>Major: </strong><span>Psych</span><br><br>
+              Put a quote here or a small description!
+            </div>
+          </div>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--6--col-tablet mdl-cell--12-col-phone animated fadeInUp">
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand">
+              <h2 class="mdl-card__title-text">Jane Doe</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              
+              <strong>Major: </strong><span>Psych</span><br><br>
+              Put a quote here or a small description!
+            </div>
+          </div>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--6--col-tablet mdl-cell--12-col-phone animated fadeInUp">
+            <div class="demo-card-square mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand">
+              <h2 class="mdl-card__title-text">Jane Doe</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              
+              <strong>Major: </strong><span>Psych</span><br><br>
+              Put a quote here or a small description!
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </main>
+  <footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+      <div class="mdl-logo">IUP Ultimate Frisbee</div>
+      <ul class="mdl-mini-footer__link-list">
+        <li><a href="/guys">Guys Team</a></li>
+        <li><a href="/girls">Girls Team</a></li>
+        <li><a href="/join">Join Team</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Privacy & Terms</a></li>
+      </ul>
+    </div>
+  
+     <div class="mdl-mini-footer__right-section">
+        <a href="http://www.endurojs.com/" target="_blank"><img src="https://s3-eu-west-1.amazonaws.com/enduro.website/direct_uploads/1484647615_made_with_enduro.png" srcset="https://s3-eu-west-1.amazonaws.com/enduro.website/direct_uploads/1484647615_made_with_enduro.png 1x, https://s3-eu-west-1.amazonaws.com/enduro.website/direct_uploads/1484647617_made_with_enduro@2x.png 2x"></a>
+     </div>
+  </footer></body>
 
 </html>
