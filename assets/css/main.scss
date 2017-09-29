@@ -1,11 +1,23 @@
 main{
-	background-color:lightgray;
+    background-color:lightgray;
+    
+}
+nav > a,
+nav > .mdl-navigation__link:hover{
+    border-bottom:2px solid #800000;
 }
 
 nav > a:hover,
 nav > .mdl-navigation__link:hover{
-    background-color:lightgray;
-    color:#800000;
+    border-bottom:2px solid white;
+    color:white;
+
+}
+
+nav > a:active,
+nav > .mdl-navigation__link:active{
+    border-bottom:2px solid white;
+    color:white;
 
 }
 
