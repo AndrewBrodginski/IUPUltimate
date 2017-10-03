@@ -2,24 +2,34 @@ main{
     background-color:lightgray;
     
 }
-nav > a,
-nav > .mdl-navigation__link:hover{
+.mdl-layout__header-row .mdl-navigation__link{
     border-bottom:2px solid #800000;
 }
 
-nav > a:hover,
-nav > .mdl-navigation__link:hover{
+.mdl-layout__header-row .mdl-navigation__link:hover{
     border-bottom:2px solid white;
     color:white;
 
 }
 
-nav > a:active,
-nav > .mdl-navigation__link:active{
-    border-bottom:2px solid white;
-    color:white;
-
+.mdl-layout__header{
+    min-height:65px !important;
 }
+
+.clear-fix{
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+// nav > a:active,
+// nav > .mdl-navigation__link:active{
+//     border-bottom:2px solid white;
+//     color:white;
+
+// }
 
 .mdl-button--raised.mdl-button--colored{
     background-color:#800000 !important;
@@ -62,8 +72,8 @@ padding:10px;
 
     overflow-y:scroll;
         padding: 35px 0px 16px 16px;
-        min-height:850px;
-    max-height:850px;
+        min-height:785px;
+    max-height:785px;
 }
 
 .calendar-card.mdl-card{
@@ -247,6 +257,8 @@ min-height:300px;
   to {opacity: 1}
 }
 
+/*Back To Top*/
+
 /* Footer */
 footer{
     background-color:#424242;
@@ -256,14 +268,22 @@ footer{
     width:100%;
 }
 
-.footer-links{
-
+.mdl-mini-footer--link-list, .mdl-mini-footer__link-list a:hover{
+    color:white !important;
 }
 
 .enduro-badge{
     position:absolute;
     top:50%;
     float:right;
+}
+
+.enduro-wrapper{
+    padding-top:10px;
+}
+
+.enduro-wrapper button{
+    color:white;
 }
 
 
