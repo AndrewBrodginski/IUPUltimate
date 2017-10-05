@@ -16,23 +16,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 
-<style>
-  .team-card-wide.mdl-card {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .team-card-wide>.mdl-card__title {
-    color: #fff;
-    height: 300px;
-    background: url('{{team_picture.image}}') center / cover;
-  }
-
-  .team-card-wide>.mdl-card__menu {
-    color: #fff;
-  }
-</style>
-
 <body>
   {{> _nav}}
   <main class="mdl-layout__content">
@@ -40,7 +23,7 @@
 
       <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--12-col">
-          <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="width:100%; height:500px;">
+          <div class="schedule-card mdl-card mdl-shadow--2dp">
             <div class="mdl-card__title">
               <h2 class="mdl-card__title-text">{{title_text}}</h2>
             </div>
@@ -49,13 +32,13 @@
             </div>
             <div class="mdl-card__actions mdl-card--border">
               <div class="mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col">
+                <div class="mdl-cell mdl-cell--4-col schedule-section">
 
                   <div class="girls_schedule">
-                      <h4>Girls Practices:</h4>
+                    <h4>Girls Practices</h4>
                     <div class="practices">
                       <div class="where">
-                        Where: {{girls_schedule.where}}
+                        <strong>Where:</strong> {{girls_schedule.where}}
                       </div>
 
 
@@ -68,16 +51,30 @@
                       {{/each}}
                     </div>
                   </div>
-                  <br><br>
+                  <div class="join-contacts">
+                    <h4>Who To Contact</h4>
+                    {{#each girls_contacts}}
+                      <div class="contact">
+                      {{name}} &nbsp; &nbsp; &nbsp;
+                      <a href="mailto:{{email}}" type="email">{{email}}</a>
+                    </div>
+                    {{/each}}
+                  </div>
+
+                </div>
+                <br>
+                <div class="mdl-card__actions mdl-card--border mdl-cell--hide-desktop mdl-cell--hide-tablet"></div>
+                <br>
+                <div class="mdl-cell mdl-cell--4-col schedule-section">
                   <div class="guys_schedule">
-                      <h4>Guys Practices:</h4>
+                    <h4>Guys Practices</h4>
                     <div class="practices">
                       <div class="where">
-                        Where: {{guys_schedule.where}}
+                        <strong>Where:</strong> {{guys_schedule.where}}
                       </div>
 
 
-                      {{#each guyss_schedule.day }}
+                      {{#each guys_schedule.day }}
 
                       <div class="times">
                         {{name}} {{time}}<br>
@@ -86,12 +83,18 @@
                       {{/each}}
                     </div>
                   </div>
-                </div>
-                <div class="mdl-cell mdl-cell--6-col">
-                  <h4>Who to Contact</h4>
-                  <div>
-
+                  <div class="join-contacts">
+                    <h4>Who To Contact</h4>
+                    {{#each guys_contacts}}
+                      <div class="contact">
+                      {{name}} &nbsp; &nbsp; &nbsp;
+                      <a href="mailto:{{email}}" type="email">{{email}}</a>
+                    </div>
+                    {{/each}}
                   </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col">
+                    <img id="join_img" src="{{join_image}}">
                 </div>
               </div>
             </div>

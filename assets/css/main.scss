@@ -86,8 +86,7 @@ padding:10px;
 .links-card.mdl-card{
      width: 100%;
 padding:10px;
-max-height:540px;
-    height: 535px;
+max-height:536px;
 overflow-y:scroll;
 }
 
@@ -286,5 +285,52 @@ footer{
     color:white;
 }
 
+/* Schedule CSS*/
+.schedule-section{
+    padding-bottom:50px;
+}
+
+.girls_schedule h4, .guys_schedule h4{
+    text-align:center;
+    font-weight:bold;
+    
+}
+
+.girls_schedule, .guys_schedule{
+    padding-bottom:10px;
+}
+.where{
+    padding:0px 0px 10px 0px;
+    font-size:20px;
+    text-align:center;
+} 
+
+.times{
+    padding:0px 0px 10px 0px;
+    font-size:18px;
+    text-align:center;
+}
+
+
+.join-contacts h4{
+    text-align:center;
+    font-weight:bold;
+}
+
+.contact{
+    text-align:center;
+    font-size:18px;
+
+}
+
+.schedule-card.mdl-card{
+    min-height:520px;
+    width:100% ;
+    
+}
+
+#join_img{
+    width:100%;
+}
 
 
