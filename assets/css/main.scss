@@ -60,14 +60,15 @@ main{
 
 }
 
-
-
 @media (min-width:320px)  { 
     .calendar-card.mdl-card{
         width:100%; 
         overflow:none !important;
         padding: 35px 0px 16px 16px;
     }
+    .links-card.mdl-card{
+        width: 100%;
+   }
  }
 @media (min-width:481px)  { 
     .calendar-card.mdl-card{
@@ -75,6 +76,9 @@ main{
         overflow:none !important;
         padding: 35px 0px 16px 16px;
     }
+    .links-card.mdl-card{
+        width: 100%;
+   }
     
  }
 @media (min-width:641px)  { 
@@ -88,6 +92,12 @@ main{
         padding: 35px 0px 16px 16px;
         max-height:425px;
     }
+    .links-card.mdl-card{
+        width: 100%;
+   min-height:536px;
+   max-height:536px;
+   overflow-y:auto;
+   }
  }
 
  @media screen and (max-width: 900px){
@@ -112,19 +122,9 @@ padding:10px;
 
     overflow-y:auto;
         padding: 35px 0px 16px 16px;
-        min-height:785px;
-    max-height:785px;
+    max-height:690px;
 }
 
-
-
-
-.links-card.mdl-card{
-     width: 100%;
-min-height:536px;
-max-height:536px;
-overflow-y:auto;
-}
 
 .slideshow-card.mdl-card{
          width: 100%;
