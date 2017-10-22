@@ -3,13 +3,13 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"1":fu
 
   return "        <div class=\"event\">\r\n          <div class=\"date\">\r\n            <i class=\"fa fa-calendar\" aria-hidden=\"true\"></i> "
     + alias2(alias1((depth0 != null ? depth0.date : depth0), depth0))
-    + " <br/> @ "
+    + " \r\n            "
     + alias2(alias1((depth0 != null ? depth0.time : depth0), depth0))
-    + "\r\n          </div>\r\n          <div class=\"event_info\">\r\n            Tournament: "
+    + "\r\n          </div>\r\n          <div class=\"event_info\">\r\n            <strong>Tournament:</strong> "
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + " <br/> \r\n            Description: "
+    + " <br/> \r\n            <strong>Description:</strong> "
     + alias2(alias1(((stack1 = blockParams[0][0]) != null ? stack1.description : stack1), depth0))
-    + " <br/> \r\n            Team Playing: "
+    + " <br/> \r\n            <strong>Who's Playing:</strong> "
     + alias2(alias1((depth0 != null ? depth0.team : depth0), depth0))
     + "<br/>\r\n          </div>\r\n        </div>\r\n        <hr/>";
 },"3":function(container,depth0,helpers,partials,data,blockParams) {
@@ -47,7 +47,7 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"1":fu
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.team_picture : depth0)) != null ? stack1.image : stack1), depth0))
     + "\" style=\"width:100%;\">\r\n        <h4>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.team_picture : depth0)) != null ? stack1.description : stack1), depth0))
-    + "</h4>\r\n      </div>\r\n      <div class=\"mdl-card__menu\">\r\n  <a id=\"joinBtn\" class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored\" href=\"/join\">Click Here to Join!</a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet\">\r\n    <div class=\"twitter-card mdl-card mdl-shadow--2dp animated fadeInUp\">\r\n      <div class=\"mdl-card__title\">\r\n        <h2 class=\"mdl-card__title-text\">Calendar Events</h2>\r\n\r\n      </div>\r\n      <div class=\"mdl-card__actions mdl-card--border\"></div>\r\n      <div class=\"events\">\r\n"
+    + "</h4>\r\n      </div>\r\n      <div class=\"mdl-card__menu\">\r\n  <a id=\"joinBtn\" class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored\" href=\"/join\">Click Here to Join!</a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"mdl-cell mdl-cell--4-col mdl-layout--large-screen-only\">\r\n    <div class=\"twitter-card mdl-card mdl-shadow--2dp animated fadeInUp\">\r\n      <div class=\"mdl-card__title\">\r\n        <h2 class=\"mdl-card__title-text\">Calendar Events</h2>\r\n\r\n      </div>\r\n      <div class=\"mdl-card__actions mdl-card--border\"></div>\r\n      <div class=\"events\">\r\n"
     + ((stack1 = helpers.each.call(alias3,((stack1 = (depth0 != null ? depth0.global : depth0)) != null ? stack1.Upcoming_Events : stack1),{"name":"each","hash":{},"fn":container.program(1, data, 1, blockParams),"inverse":container.noop,"data":data,"blockParams":blockParams})) != null ? stack1 : "")
     + "\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n<div class=\"mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet\">\r\n  <div class=\"links-card mdl-card mdl-shadow--2dp animated fadeInUp\">\r\n    <div class=\"mdl-card__title\">\r\n      <h2 class=\"mdl-card__title-text\">Wanna Learn?</h2>\r\n    </div>\r\n    <div class=\"mdl-card__actions mdl-card--border\"></div>\r\n    <div class=\"links-container\">\r\n"
     + ((stack1 = helpers.each.call(alias3,(depth0 != null ? depth0.information_links : depth0),{"name":"each","hash":{},"fn":container.program(3, data, 1, blockParams),"inverse":container.noop,"data":data,"blockParams":blockParams})) != null ? stack1 : "")

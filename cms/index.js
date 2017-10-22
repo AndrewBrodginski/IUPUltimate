@@ -2,9 +2,11 @@
 	team_picture:{
 		image: '/assets/img/team.jpg',
 		$image_type: 'image',
-		title:'IUP Ultimate at High Tide 2017',
-		description:''
+		title:'IUP Ultimate at High Tide 2017'
+		
 	},
+	text_area_title:'Here at Ultimate...',
+	text_area_description:'Edison bulb cred prism gochujang marfa echo park. Thundercats scenester wayfarers beard cronut tousled normcore gastropub messenger bag sartorial hella small batch mixtape gluten-free edison bulb. Tumeric fanny pack seitan twee unicorn flannel chartreuse messenger bag artisan keffiyeh la croix listicle yuccie street art hot chicken. Quinoa la croix single-origin coffee humblebrag YOLO austin small batch. Hoodie 90s cold-pressed, meh flannel semiotics vape yuccie vaporware. Vaporware VHS food truck kale chips vinyl hashtag. Etsy locavore offal mustache, kitsch sriracha paleo organic iceland +1 cray master cleanse health goth. Skateboard meggings aesthetic church-key VHS trust fund. Listicle celiac tbh poutine intelligentsia skateboard woke polaroid. Meh bitters VHS seitan artisan. Sriracha tote bag tbh 8-bit vaporware jianbing hammock paleo scenester kombucha. Prism jean shorts photo booth, brunch kale chips taiyaki authentic hammock kickstarter quinoa. Church-key prism sriracha actually wayfarers listicle butcher.',
 	slide_show: [
 		{
 			$image_type: 'image',

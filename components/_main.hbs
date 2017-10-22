@@ -17,7 +17,7 @@
       </div>
     </div>
   </div>
-  <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+  <div class="mdl-cell mdl-cell--4-col mdl-layout--large-screen-only">
     <div class="twitter-card mdl-card mdl-shadow--2dp animated fadeInUp">
       <div class="mdl-card__title">
         <h2 class="mdl-card__title-text">Calendar Events</h2>
@@ -28,12 +28,13 @@
         {{#each global.Upcoming_Events as |event|}}
         <div class="event">
           <div class="date">
-            <i class="fa fa-calendar" aria-hidden="true"></i> {{this.date}} <br/> @ {{this.time}}
+            <i class="fa fa-calendar" aria-hidden="true"></i> {{this.date}} 
+            {{this.time}}
           </div>
           <div class="event_info">
-            Tournament: {{this.title}} <br/> 
-            Description: {{event.description}} <br/> 
-            Team Playing: {{this.team}}<br/>
+            <strong>Tournament:</strong> {{this.title}} <br/> 
+            <strong>Description:</strong> {{event.description}} <br/> 
+            <strong>Who's Playing:</strong> {{this.team}}<br/>
           </div>
         </div>
         <hr/>{{/each}}

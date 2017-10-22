@@ -50,13 +50,53 @@ main{
         .demo-card-square.mdl-card {
             width:100%;
           }
+
+
+          .calendar-card.mdl-card{
+            width:100%; 
+            padding: 35px 0px 16px 16px;
+            max-height:425px;
+        }
+
 }
 
-@media screen and (max-width: 900px){
+
+
+@media (min-width:320px)  { 
+    .calendar-card.mdl-card{
+        width:100%; 
+        overflow:none !important;
+        padding: 35px 0px 16px 16px;
+    }
+ }
+@media (min-width:481px)  { 
+    .calendar-card.mdl-card{
+        width:100%; 
+        overflow:none !important;
+        padding: 35px 0px 16px 16px;
+    }
+    
+ }
+@media (min-width:641px)  { 
+
+ }
+
+ @media (min-width:900px){
+    .calendar-card.mdl-card{
+        width:100%; 
+        overflow-y:auto;
+        padding: 35px 0px 16px 16px;
+        max-height:425px;
+    }
+ }
+
+ @media screen and (max-width: 900px){
     #main-card-title{
         display:none;
     }
+
 }
+
 
 .main-card.mdl-card {
   width: 100%;
@@ -70,24 +110,20 @@ padding:10px;
 .twitter-card.mdl-card{
     width:100%;
 
-    overflow-y:scroll;
+    overflow-y:auto;
         padding: 35px 0px 16px 16px;
         min-height:785px;
     max-height:785px;
 }
 
-.calendar-card.mdl-card{
-    width:100%; 
-    overflow-y:scroll;
-    padding: 35px 0px 16px 16px;
-    max-height:425px;
-}
+
+
 
 .links-card.mdl-card{
      width: 100%;
-padding:10px;
+min-height:536px;
 max-height:536px;
-overflow-y:scroll;
+overflow-y:auto;
 }
 
 .slideshow-card.mdl-card{
@@ -102,7 +138,7 @@ min-height:300px;
     .twitter-card.mdl-card{
     width:100%;
 
-    overflow-y:scroll;
+    overflow-y:auto;
         padding: 0px 0px 16px 16px;
     max-height:650px;
 }
@@ -141,13 +177,11 @@ min-height:300px;
 }
 
 .date{
+    font-weight:bold;
     font-size:17spx;
     margin-bottom:20px;
 }
 
-.event_info{
-
-}
 
 .link-title a{
     background-color:transparent;
@@ -331,6 +365,32 @@ footer{
 
 #join_img{
     width:100%;
+}
+
+.column1{
+    padding:3px;
+    width:47%;
+    float:left;
+    display:block;
+}
+
+.column2{
+    padding:3px;
+    width:47%;
+    float:left;
+    display:block;
+}
+
+.developers{
+    color:white !important;
+}
+
+.danny{
+    height:400px;
+}
+
+.andrew{
+    height:400px;
 }
 
 

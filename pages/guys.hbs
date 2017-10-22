@@ -61,13 +61,16 @@
             </div>
             <div class="mdl-card__actions mdl-card--border"></div>
             <div class="events">
+              
               {{#each global.Upcoming_Events as |event|}} {{#ifTeam event 'Guys'}}
               <div class="event">
                 <div class="date">
-                  <i class="fa fa-calendar" aria-hidden="true"></i> {{this.date}} <br/> @ {{this.time}}
+                  <i class="fa fa-calendar" aria-hidden="true"></i> {{this.date}} 
+                   {{this.time}}
                 </div>
                 <div class="event_info">
-                  Tournament: {{this.title}} <br/> Description:{{event.description}} <br/> Team Playing: {{this.team}}<br/>
+                  <strong>Tournament: </strong>{{this.title}} <br/> <strong>Description:</strong>{{event.description}} 
+                  <br/> <strong>Team Playing:</strong> {{this.team}}<br/>
                 </div>
               </div>
               <hr/> {{/ifTeam}} {{/each}}
