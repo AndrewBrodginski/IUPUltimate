@@ -386,11 +386,32 @@ footer{
 }
 
 .danny{
-    height:400px;
+    height:450px;
 }
 
 .andrew{
-    height:400px;
+    height:450px;
+}
+
+.social-media-bar{
+    font-size:30px;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+.social-media-bar a{
+    border:1px solid black;
+    padding:10px;
+    border-radius:5px;
+    color:black;
+    margin: 0px 0px 0px 5px;
+}
+
+.social-media-bar a:hover{
+    border:1px solid black;
+    border-radius:5px;
+    color:white;
+    background-color:black;
 }
 
 
